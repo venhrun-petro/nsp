@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+  <body>
+  {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    {{- range .Params.sections -}}
+      {{ partial (printf "blocks/%s" .block) (dict "Params" .) }} 
+    {{- end -}} 
+  {{ partial "footer.html" . }} 
+  </body>
+</html>
+

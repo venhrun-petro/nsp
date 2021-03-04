@@ -1,0 +1,9 @@
+{{- with .Params.button -}} 
+    <section class="o-button">
+        <div class="o-button__container">
+            <div class="o-button__cont o-button__cont--center">
+                <a class="o-button__actions" href="{{ .link }}">{{ .text }}</a>
+            </div> 
+        </div>
+    </section> 
+{{- end -}}

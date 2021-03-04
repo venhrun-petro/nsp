@@ -1,0 +1,254 @@
+/*
+ * General typo for components
+ *
+ */
+
+a {
+  color: var(--color-font-black);
+}
+
+ul,
+ol,
+p,
+dl,
+table,
+figure,
+form,
+form fieldset {
+  margin: 0 0 0.8em 0;
+}
+
+figcaption {
+  font-size: 0.8em;
+  line-height: 1;
+  text-align: center;
+}
+
+blockquote {
+  position: relative;
+  min-height: 45px;
+  padding: 0 0 0.8em 3.7em;
+  color: #999;
+}
+
+blockquote::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10rem;
+  line-height: 0.8;
+}
+
+/** Table BEGIN **/
+table {
+  border-color: black;
+}
+
+table caption {
+  font-size: 1.3em;
+}
+
+table thead {
+  font-weight: bold;
+}
+
+table tfoot {
+  font-weight: bold;
+}
+
+table td {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+/** END Table **/
+
+/** List BEGIN **/
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 0.4em;
+}
+
+/** END List **/
+
+/** Inline BEGIN **/
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+cite,
+dfn,
+i,
+var {
+  font-style: italic;
+}
+
+i.fa {
+  /* Font Awesome default reset */
+  font-style: normal !important;
+}
+
+small {
+  font-size: 80%;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+del,
+s,
+strike {
+  text-decoration: line-through;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+
+.h1{
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 52px;
+  color: $color-blue;
+  margin: 0;
+  & *{
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+
+  @include xsl {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.h2{
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 400; 
+  color: $color-blue;
+  margin: 0;
+  & *{
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+
+  @include xsl {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.h3{
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $color-blue;
+  margin: 0;
+  & *{
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+}
+
+.h4{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+  color: $color-blue;
+  margin: 0;
+  & *{
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+}
+
+.h5{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px; 
+  color: $color-blue;
+  margin: 0;
+
+  & * {
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+}
+
+.h6{
+  font-weight: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color-blue;
+  margin: 0;
+
+  & * {
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+}
+ 
+.general-paragraph {
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 32px;
+  color: $color-black-2;
+  margin: 0;
+
+  & * {
+    font-size: inherit;
+    line-height: inherit; 
+    text-decoration: none;
+  }
+
+  @include xsl {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

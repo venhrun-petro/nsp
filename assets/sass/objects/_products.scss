@@ -1,0 +1,33 @@
+.o-products {
+  display: flex;
+  padding: 60px 0 50px;
+
+  @include sm {
+    padding: 45px 0 40px;
+  }
+
+  &__container {
+    @extend .container;
+  }
+
+  &__row {
+    @extend .row;
+  }
+  
+  &__cont {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include lg {
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    margin: 0 15px 30px;
+
+    @include sm {
+      margin: 0 0 15px;
+    }
+  }
+}

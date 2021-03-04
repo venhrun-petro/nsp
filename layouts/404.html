@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+  {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+  <main class="main">
+    <sections class="block-404">
+      <div class="container"> 
+          <div class="block-404_cont"> 
+            <div class="block-404_left">
+              <picture>
+                <source class="lazy" data-srcset="{{ "img/404-error.webp" | absURL }}" type="image/webp">
+                <source class="lazy" data-srcset="{{ "img/standart/404-error.png" | absURL }}" type="image/png">
+                <img class="block-404_img lazy" data-src="{{ "img/standart/404-error.png" | absURL }}" alt="bg-404" >
+              </picture>
+            </div>
+            <div class="block-404_right">
+              <h1>404</h1>
+              <p class="general_paragraph">The page you were looking for couldn't be found</p>
+              <div>
+                <a class="btn-read" href="/"><span>Go back to homepage</span>
+                </a> 
+              </div>
+            </div> 
+          </div> 
+      </div> 
+      <picture>
+          <source class="lazy" data-srcset="{{ "img/bg-404.webp" | absURL }}" type="image/webp">
+          <source class="lazy" data-srcset="{{ "img/standart/bg-404.jpg" | absURL }}" type="image/png">
+          <img class="general_img lazy" data-src="{{ "img/bg-404.webp" | absURL }}" alt="bg" >
+      </picture>
+    </sections> 
+    <sections class="block-404-content">
+      <div class="container"> 
+        <div class="block-404-content_column">
+          <img class="block-404-content_img" src="{{ "img/svg/logo-2.svg" | absURL }}" alt="logo" >
+          <a class="btn-read" href="/"><span>Find out more</span>
+            <div class="btn-read_img" style="-webkit-mask-image: url('../img/svg/arrow.svg');
+              mask-image: url('../img/svg/arrow.svg');">
+            </div>
+          </a>
+        </div>
+      </div>
+    </sections>
+  </main>
+  {{ partial "footer.html" . }}
+  </body>
+</html>
+

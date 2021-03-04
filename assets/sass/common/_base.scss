@@ -1,0 +1,39 @@
+html,
+body {
+  font-family: $font-roboto;
+  font-size: 14px;
+  background-color: $color-green;
+
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+
+  @include xsl {
+    padding: 0 10px;
+  }
+}
+
+.container-small {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1060px;
+
+  @include xsl {
+    padding: 0 10px;
+  }
+}
+
+.row {
+  margin: 0 -15px;
+  @include sm {
+    margin: 0;
+  }
+}

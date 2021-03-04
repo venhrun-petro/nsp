@@ -1,0 +1,79 @@
+ {{ define "main" }} 
+  <sections class="hero-2" id="hero-2">
+    <div class="container">
+      <div class="row">
+        <div class="hero-2_cont"> 
+          <h1>Welcome to the Sea Life Rescue  Blog</h1>
+          <p class="general_paragraph">If you like, or dislike, what we have to say, please drop us a line as we're always looking to open dicussions. We hope you enjoy these articles.</p>
+        </div>
+      </div>
+    </div> 
+    <picture >
+      <source class="lazy" data-srcset="{{ "img/blog-top.webp" | absURL }}" type="image/webp"> 
+      <source class="lazy" data-srcset="{{ "img/standart/blog-top.jpg" | absURL }}" type="image/png">
+      <img class="general_img lazy" data-src="{{ "img/blog-top.webp" | absURL }}" alt="bg" >
+    </picture>  
+  </sections>
+ <h2 class="only-for-optimization"></h2>
+  <section class="blog">
+    <div class="blog_wrap">
+      <div class="container">
+        <div class="row">
+          <div class="blog_cont">
+            {{ $pag := .Paginate (where (where .Site.Pages "Type" "blog") "IsPage" true) }}
+            {{ range $pag.Pages }}
+            <div class="blog_cont_list">
+                <div class="blog_cont_list_img">
+                  {{- with .Params.img -}}
+                    <picture >
+                        {{- with .webp -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/webp">{{- end -}} 
+                        {{- with .standart -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/png">{{- end -}}
+                        {{- with .webp -}}<img class="lazy" data-src="{{ . | absURL }}" alt="post_img" >{{- end -}}
+                    </picture>
+                  {{- end -}}
+                </div> 
+                <div class="blog_cont_list_column">
+                  <a href="{{ .Permalink }}" class="blog-title">{{ .Title }}</a>
+                  {{ $taxo := "tags" }}  
+                  <div class="tags">
+                      {{ range .Param $taxo }}
+                          {{ $name := . }}
+                          {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                              <span>{{ $name }} | </span>
+                          {{ end }}
+                      {{ end }}<span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                  </div>
+                  <p class="blog_cont_list_column_sub">{{ .Params.paragraph }}</p>
+                </div> 
+              </div>
+              {{ end }}  
+            </div>
+          </div>
+        </div>
+        <div class="container"> 
+        <div class="row">
+          {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+            <div class="pager {{ if not .Paginator.HasPrev }} end {{ end }}">
+            {{ if .Paginator.HasPrev }}
+              <a class="pager-button pager-button-prev" href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}" >
+              <img class="pager-button_img lazy" data-src="{{ "img/svg/blog-prev.svg" | absURL }}" alt="arrow" />
+              </a>
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+              <a class="pager-button pager-button-next" href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}" >
+              <img class="pager-button_img lazy" data-src="{{ "img/svg/blog-next.svg" | absURL }}" alt="arrow" />
+              </a>
+            {{ end }}
+            </div>
+          {{ end }} 
+          </div>
+        </div> 
+        <picture >
+          <source class="lazy" data-srcset="{{ "img/blog.webp" | absURL }}" type="image/webp"> 
+          <source class="lazy" data-srcset="{{ "img/standart/blog.jpg" | absURL }}" type="image/png">
+          <img class="general_img lazy" data-src="{{ "img/blog.webp" | absURL }}" alt="bg" >
+        </picture> 
+      </div> 
+  </section>
+{{ end }}
+

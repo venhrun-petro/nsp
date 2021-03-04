@@ -1,0 +1,31 @@
+<div class="c-product {{ .class }}">
+    <div class="c-product__cont">
+        <div class="{{- if not .Params.have -}}c-product__have c-product__have--not {{- else -}} c-product__have {{- end -}}">в наявності</div>
+        {{- with .Params.img -}}
+            <div class="c-product__img-cont">
+                <img class="c-product__img" src="{{ . | absURL }}" alt="product"/>
+            </div>
+        {{- end -}}
+        <div class="c-product__column">
+            {{- with .Params.title -}}
+                <h6 class="c-product__title">{{ . }}</h6>
+            {{- end -}}
+            {{- with .Params.description -}}
+                <p class="c-product__description">{{ . }}</p>
+            {{- end -}}
+            <div class="c-product__bottom">
+                <a class="c-product__more">
+                    Детальніше
+                </a>
+                {{- with .Params.price -}}
+                    <p class="c-product__price">
+                        {{ . }}
+                    </p>
+                {{- end -}}
+            </div>
+        </div>
+        <button class="c-product__cart">
+            у кошик
+        </button>
+    </div>
+</div>

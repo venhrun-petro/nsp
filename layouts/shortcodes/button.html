@@ -1,0 +1,5 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class="v-button"> 
+    <a class="v-button__actions" {{ with .Get `src` }} src="{{ . }}"{{ end }}></a>
+    {{ with .Get `text` }}{{ . }}{{ end }}
+ </div>

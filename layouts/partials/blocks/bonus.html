@@ -1,0 +1,26 @@
+<section class="c-bonus">
+    <div class="c-bonus__container">
+        <div class="c-bonus__cont">
+            <img class="c-bonus__before" src="{{ "img/bonus-before.png" | absURL }}" alt="bonus"/>
+            {{- with .Params.bonus -}} 
+                <div class="c-bonus__bonus">{{ . }}</div>
+            {{- end -}}
+
+            {{- with .Params.title -}} 
+                <div class="c-bonus__cart">
+                    <p class="c-bonus__title">{{ . }}</p>
+                </div>
+            {{- end -}}
+
+            {{- with .Params.button -}} 
+                <div class="c-bonus__btn-cont">
+                    <a class="c-bonus__btn" href="{{ .link }}">{{ .text }}</a>
+                </div>
+            {{- end -}}
+        </div>
+    </div>
+    {{- with .Params.img -}} 
+        <img class="c-bonus__bg" src="{{ . | absURL }}" alt="bonus"/>
+    {{- end -}}
+</section> 
+ 

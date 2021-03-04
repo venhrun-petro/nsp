@@ -1,0 +1,31 @@
+
+<div class="blog_cont">
+    {{ range first 3 (where (where .Site.Pages "Type" "blog") "IsPage" true) }} 
+       <div class="blog_cont_list">
+            <div class="blog_cont_list_img">
+                {{- with .Params.img -}}
+                    <picture >
+                        {{- with .webp -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/webp">{{- end -}} 
+                        {{- with .standart -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/png">{{- end -}}
+                        {{- with .webp -}}<img class="lazy" data-src="{{ . | absURL }}" alt="post_img" >{{- end -}}
+                    </picture>
+                {{- end -}}
+            </div> 
+            <div class="blog_cont_list_column">
+                <a href="{{ .Permalink }}" class="blog-title">{{ .Title }}</a>
+                {{ $taxo := "tags" }}  
+                <div class="tags">
+                    {{ range .Param $taxo }}
+                        {{ $name := . }}
+                        {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                            <span>{{ $name }} | </span>
+                        {{ end }}
+                    {{ end }}<span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                </div>
+                <p class="blog_cont_list_column_sub">{{ .Params.paragraph }}</p>
+            </div> 
+        </div>
+    {{ end }} 
+</div>
+
+ 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+  <body>
+  {{ partial "header.html" . }}
+  <div class="main">
+    <div class="post">
+      <div class="container">
+        <h2 class="post_title">{{ .Params.Title }}</h2>
+      </div> 
+      {{ if .Params.img_post }}
+        {{- with .Params.img_post -}}
+          <picture >
+              {{- with .webp -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/webp">{{- end -}} 
+              {{- with .standart -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/png">{{- end -}}
+              {{- with .webp -}}<img class="post_img" data-src="{{ . | absURL }}" alt="post_img" >{{- end -}}
+          </picture>
+        {{- end -}}
+      {{ else }}
+        {{- with .Params.img -}}
+          <picture >
+              {{- with .webp -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/webp">{{- end -}} 
+              {{- with .standart -}}<source class="lazy" data-srcset="{{ . | absURL }}" type="image/png">{{- end -}}
+              {{- with .webp -}}<img class="post_img" data-src="{{ . | absURL }}" alt="post_img" >{{- end -}}
+          </picture>
+        {{- end -}} 
+      {{ end }}
+    </div>
+    <section class="content" style="background: url('{{ "img/post-bg.webp" | absURL }}' );"> 
+      <div class="container">
+        <div class="content_cont"> 
+              <h3 class="content_cont_confirm">Confirming Working</h3>
+              {{ $taxo := "tags" }}  
+              <div class="tags">
+                  {{ range .Param $taxo }}
+                      {{ $name := . }}
+                      {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                          <span>{{ $name }} | </span>
+                      {{ end }}
+                  {{ end }}<span>{{ .Date.Format "Jan 2, 2006" }}</span>
+              </div>
+              <div class="socila-shar">
+                  <p class="socila-shar_text">Share on:</p> 
+                  <!-- <a class="socila-shar_link" href="https://www.instagram.com/sharer.php?u={{ .Permalink }}">
+                    <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-instagram.svg" | absURL }}" alt="bg" /></a> -->
+                  <a class="socila-shar_link" href="https://facebook.com/sharer.php?u={{ .Permalink }}" title="Share on Facebook" target="_blank" rel="noopener">
+                    <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-facebook.svg" | absURL }}" alt="bg" />
+                  </a>
+                  <a class="socila-shar_link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">
+                    <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-linkedin.svg" | absURL }}" alt="bg" />
+                  </a>
+                  <a class="socila-shar_link" href="https://twitter.com/intent/tweet?text={{ .Params.title }}&url={{ .Permalink }}" title="Share on Twitter" target="_blank" rel="noopener">
+                    <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-twitter.svg" | absURL }}" alt="bg" />
+                  </a> 
+              </div> 
+            <div class="post_content">
+                {{ .Content }}
+            </div>
+            <div class="socila-shar">
+              <p class="socila-shar_text">Share on:</p> 
+              <!-- <a class="socila-shar_link" href="https://www.instagram.com/sharer.php?u={{ .Permalink }}">
+                <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-instagram.svg" | absURL }}" alt="bg" /></a> -->
+              <a class="socila-shar_link" href="https://facebook.com/sharer.php?u={{ .Permalink }}" title="Share on Facebook" target="_blank" rel="noopener">
+                <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-facebook.svg" | absURL }}" alt="bg" />
+              </a>
+              <a class="socila-shar_link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">
+                <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-linkedin.svg" | absURL }}" alt="bg" />
+              </a>
+              <a class="socila-shar_link" href="https://twitter.com/intent/tweet?text={{ .Params.title }}&url={{ .Permalink }}" title="Share on Twitter" target="_blank" rel="noopener">
+                <img class="socila-shar_img lazy" data-src="{{ "img/svg/share-twitter.svg" | absURL }}" alt="bg" />
+              </a> 
+          </div>  
+        </div>
+         
+      <!-- <div class="container"> 
+        <div class="row"> 
+            <div class="pager">
+              {{ if .PrevInSection }} 
+              <a class="pager-button pager-button-prev" href="{{ .PrevInSection.Permalink }}" >
+              <img class="pager-button_img lazy" data-src="{{ "img/svg/blog-prev.svg" | absURL }}" alt="arrow" />
+              </a>
+            {{ end }}
+            {{ if .NextInSection }}
+              <a class="pager-button pager-button-next" href="{{ .NextInSection.Permalink }}" >
+              <img class="pager-button_img lazy" data-src="{{ "img/svg/blog-next.svg" | absURL }}" alt="arrow" />
+              </a>
+            {{ end }}  
+          </div>
+        </div> 
+      </div>  -->
+      <div class="post_repated"> 
+        <h3>Related Articles:</h3>
+        <div class="row"> 
+          {{  partial "blocks/new-post.html" . }}
+        </div>  
+      </div> 
+    </section>
+
+  </div>
+  {{ partial "footer.html" . }}
+  </body>
+</html>

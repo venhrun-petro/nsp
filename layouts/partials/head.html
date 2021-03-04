@@ -1,0 +1,65 @@
+<head>
+  {{ $title := print .Title " · " .Site.Title }}
+  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>{{ $title }}</title>
+  <meta property="og:title" content="{{ $title }}" />
+  <meta name="twitter:title" content="{{ $title | truncate 70 }}" />
+
+  {{ $description := print .Params.description " · " .Site.Params.description }}
+  {{ $img := print .Params.img " · " .Site.Params.img }}
+  {{ if .IsHome }}{{ $description = .Site.Params.description }}{{ end }}
+  <meta name="description" content="{{ $description }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta name="twitter:description" content="{{ $description }}">
+
+  <meta name="HandheldFriendly" content="True" />
+
+
+  <meta name="author" content="{{ .Site.Params.author }}"/>
+  {{- with .Site.Params.favicon }}
+    <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
+  {{- end -}} 
+ 
+  {{- with .Params.share_img | default .Params.image | default .Site.Params.logo }}
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{- end }}
+  <meta name="twitter:card" content="summary" />
+  {{- with .Site.Params.author }}
+    <meta name="twitter:site" content="@{{ . }}" />
+    <meta name="twitter:creator" content="@{{ . }}" />
+  {{- end }}
+  {{- with .Site.Params.fb_app_id }}
+    <meta property="fb:app_id" content="{{ . }}" />
+  {{- end }} 
+
+  <meta property="og:image" content="{{ $img }}">
+  <meta property="og:image:secure_url" content="{{ $img }}">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="534">
+  <meta property="og:image:alt" content="Site Img">
+  
+
+  <meta property="og:url" content="{{ .Permalink }}" />	
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:type" content="website" />	
+  <meta property="og:site_name" content="{{ $title }}" />
+  <meta property="og:title" content="{{ $title }}">
+
+  {{ .Hugo.Generator -}}
+
+  <link rel="canonical" href="{{ .Permalink }}" /> 
+  <!-- <link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ $title }}"> -->
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+
+  {{ $sass := resources.Get "sass/main.scss" }}
+  {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
+  {{ $style := $sass | resources.ToCSS $options }} 
+  <link rel="stylesheet" href="{{ $style.Permalink | absLangURL }}">
+</head>

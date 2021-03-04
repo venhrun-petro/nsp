@@ -1,0 +1,45 @@
+.o-button {
+  display: flex;
+
+  &__container {
+    @extend .container-small;
+  }
+
+  &__cont {
+    display: flex;
+    margin-bottom: 60px;
+
+    &--center {
+      justify-content: center;
+    }
+
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__actions {
+    border: 3px solid $color-green-2;
+    padding: 17px 55px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: $color-green-2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s all;
+
+    @include xsl {
+      padding: 12px 30px;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 30px;
+    }
+
+    &:hover {
+      border: 3px solid $color-blue;
+      color: $color-blue;
+    }
+  }
+}

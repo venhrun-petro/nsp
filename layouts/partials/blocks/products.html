@@ -1,0 +1,13 @@
+<section class="o-products">
+    <div class="o-products__container">
+        <div class="o-products__row">
+            <div class="o-products__cont">
+                {{- with .Params.product -}}
+                    {{- range . -}}
+                        {{ partial "component/product" (dict "class" "o-products__item" "Params" .) . }} 
+                     {{- end -}}  
+                {{- end -}}  
+            </div>
+        </div>
+     </div>
+</section>

@@ -1,0 +1,20 @@
+// @import "./vendors/slick.scss";
+// @import "./vendors/slick-theme.scss";
+
+@import './common/reset';
+@import './common/vars';
+@import './common/mixins';
+@import './common/base';
+@import './common/fonts';
+@import './common/typography';
+
+@import './layout/header';
+@import './layout/burger';
+@import './layout/footer';
+
+@import './components/content';
+@import './components/product';
+@import './components/bonus';
+
+@import './objects/button';
+@import './objects/products';

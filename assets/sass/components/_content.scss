@@ -1,0 +1,143 @@
+.c-content {
+  display: flex;
+  padding: 60px 0;
+
+  @include sm {
+    padding: 45px 0;
+  }
+
+  &__container {
+    @extend .container-small;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      @extend .h1;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-bottom: 75px;
+
+        @include xsl {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    h2 {
+      @extend .h2;
+
+      &:not(:last-child) {
+        margin-bottom: 55px;
+
+        @include xsl {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    h3 {
+      @extend .h3;
+
+      &:not(:last-child) {
+        margin-bottom: 45px;
+
+        @include xsl {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    h4 {
+      @extend .h4;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include xsl {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    h5 {
+      @extend .h5;
+
+      &:not(:last-child) {
+        margin-bottom: 35px;
+
+        @include xsl {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    h6 {
+      @extend .h6;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @include xsl {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    p{
+      @extend .general-paragraph;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+
+        @include xsl {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    ul,
+    ol {
+      padding: 0 0 0 30px;
+      margin-bottom: 30px;
+
+      @include xsl {
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+      }
+
+      li {
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 32px;
+        color: $color-black-2;
+
+        @include xsl {
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        a {
+          color: $color-blue;
+        }
+      }
+    }
+
+    ul {
+      li {
+        list-style: disc;
+      }
+    }
+
+     ol {
+      li {
+        list-style: decimal;
+      }
+    }   
+  }
+}

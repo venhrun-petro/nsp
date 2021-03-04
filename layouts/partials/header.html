@@ -1,0 +1,53 @@
+<!-- <header class="header">
+  <div class="container"> 
+    <div class="header_cont">
+      {{ if isset .Site.Params "logo" }}
+      <a class="header_cont_logo" href="{{ .Site.BaseURL }}" >
+        <picture>
+          <source class="avatar-img" media="(max-width:650px)" srcset="{{ .Site.Params.logo_mobail | absURL }}"> 
+          <img class="avatar-img" src="{{ .Site.Data.general.logo | absURL }}" alt="Flowers" >
+        </picture> 
+      </a>
+      {{ end }} 
+      {{ $url := .RelPermalink }}
+      <nav class="header_cont_nav">
+        <ul class="header_cont_nav_list">
+          {{ range .Site.Menus.main.ByWeight }}
+          <li class="header_cont_nav_list_items {{ if eq $url .URL }} active {{ end }} 
+          {{ range .Children }}
+            {{ if eq $url .URL }}
+              active 
+            {{ end }}
+          {{ end }}
+          "> 
+            <a class="header_cont_nav_list_items_link"
+              href="{{ if.URL }}{{ .URL | relLangURL }}{{ end }}">{{ .Name }}
+            </a>
+            {{ if .HasChildren }}
+            <div class="header_cont_nav_list_items_children"> 
+            {{ range .Children }}
+              <a class="header_cont_nav_list_items_children_link_children {{ if eq $url .URL }}
+              active 
+              {{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+            {{ end }}
+            </div>
+            {{ end }}
+          </li>
+          {{ end }}
+        </ul>
+        <a class="general-button" href="{{ .Site.Data.general.donat_link }}">
+          <div class="general-button_img" 
+              style="-webkit-mask-image: url({{ "../img/svg/heart.svg" | absURL}});
+                    mask-image: url({{ "../img/svg/heart.svg" | absURL}});">
+          </div>
+          <span>Donate</span>
+        </a> 
+      </nav>
+      <div class="hamburger hamburger--slider js-hamburger">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+      </div>
+    </div> 
+  </div>
+</header> -->

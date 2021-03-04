@@ -1,5 +1,4 @@
 public/
 node_modules/
 resources/_gen/
-.gitlab-ci.yml
-config.toml
+.gitlab-ci.yml 

@@ -1,0 +1,55 @@
+Paginate = 6
+assetDir = "assets/"
+baseurl = "/"
+canonifyurls = true
+contentdir = "content"
+layoutdir = "layouts"
+paginatePath = "page"
+publishdir = "public"
+title = "NSP"
+
+
+[Params]
+author = "NSP"
+description = "NSP"
+favicon = "img/svg/icon.svg"
+logo = "img/logo.png"
+rss = true
+url = "/"
+
+
+[[menu.main]]
+name = "The Challenge"
+url = "/the-challenge/"
+weight = 1
+[[menu.main]]
+name = "Our Solution"
+url = "our-solution/"
+weight = 2
+[[menu.main]]
+name = "Our Technology"
+url = "/our-technology/"
+weight = 3
+[[menu.main]]
+name = "Projects"
+url = "/projects/"
+weight = 4
+[[menu.main]]
+name = "Who We Are"
+url = "/who-we-are/"
+weight = 5
+[[menu.main]]
+name = "Get Involved"
+url = "/get-involved/"
+weight = 6
+[permalinks]
+
+
+DefaultContentLanguage = "en"
+blog = "/blog/:year/:month/:day/:slug"
+metaDataFormat = "md"
+post = "/blog/:year/:month/:slug/"
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5

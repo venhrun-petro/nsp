@@ -5,9 +5,9 @@ layout: "page"
 sections:
     - block: "content"
       info: |
-        # Новини
+        # Статті
     - block: "news"
-      type: row
+      type: column
       news: 
         - title: ЗАГОЛОВОК
           img: img/news.jpg
@@ -29,5 +29,6 @@ sections:
           autor: АВТОР
           date: ДАТА
           descriptions: Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.
+    
   
 ---

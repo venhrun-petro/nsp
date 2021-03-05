@@ -1,0 +1,31 @@
+<section class="c-news">
+    {{ $type := .Params.type }}
+    <div class="c-news__container">
+        <div class="{{- if eq $type "column" -}} {{ " c-news__row" }} {{- end -}}">
+            <div class="c-news__cont {{- if eq $type "column" -}} {{ " c-news__cont--column" }} {{- end -}}"> 
+                {{- with .Params.news -}}
+                    {{- range . -}}
+                        <div class="c-news__item {{- if eq $type "column" -}} {{ " c-news__item--column" }} {{- end -}} ">
+                            {{- with .img -}}
+                                <div class="c-news__bg-cont">
+                                    <img class="c-news__img" src="{{ . | absURL }}" alt="news"/>
+                                </div>
+                            {{- end -}}   
+                            <div class="c-news__info">
+                                {{- with .title -}}
+                                    <h4 class="c-news__title">{{ . }}</h4>
+                                {{- end -}}
+                                {{- with .descriptions -}}
+                                    <p class="c-news__descriptions">{{ . }}</p>
+                                {{- end -}} 
+                                <p class="c-news__date">
+                                    {{ .autor }} | {{ .date }}
+                                </p>
+                            </div> 
+                        </div>
+                     {{- end -}}  
+                {{- end -}}  
+            </div>
+        </div>
+     </div>
+</section>

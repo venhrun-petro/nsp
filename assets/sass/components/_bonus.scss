@@ -14,7 +14,7 @@
     height: 100%;
     z-index: 1;
     object-fit: cover;
-    object-position: center;
+    object-position: 47% center;
   }
 
   &__cont {
@@ -25,12 +25,21 @@
     justify-content: center;
     align-items: center;
     padding: 40px 0 30px;
+
+    @include sm {
+      padding: 130px 0;
+    }
   }
 
   &__before {
     position: absolute;
     left: 0;
     top: -9px;
+
+    @include sm {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__bonus {
@@ -38,11 +47,23 @@
     font-size: 96px;
     line-height: 100px;
     color: $color-white;
+
+    @include xsl {
+      font-size: 68px;
+      line-height: 100px;
+    }
   }
 
   &__cart {
     padding-top: 20px;
     position: relative;
+    margin: 0 70px;
+
+    @include sm {
+      padding-top: 0;
+      margin: 0 -15px 50px;
+      order: -1;
+    }
 
     &::before,
     &::after
@@ -55,6 +76,10 @@
       background: url('../img/bonus-title.png');
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include sm {
+        display: none;
+      }
     }
 
     &::before {
@@ -75,13 +100,27 @@
     font-size: 40px;
     line-height: 40px;
     color: $color-gray;
+    text-align: center;
     margin: 0;
+
+    @include sm {
+      padding: 10px 15px;
+    }
+
+    @include xsl {
+      font-size: 32px;
+      line-height: 37px;
+    }
   }
    
   &__btn-cont {
     display: flex;
     justify-content: center;
     margin-top: 25px;
+
+    @include sm {
+      margin-top: 42px;
+    }
   }
 
   &__btn {
@@ -98,6 +137,12 @@
     text-decoration: none;
     color: pointer;
     transition: 0.3s all;
+
+    @include xsl {
+      padding: 12px 30px;
+      font-size: 18px;
+      line-height: 21px;
+    }
 
     &:hover {
       background: rgba(255, 255, 255, 0.4);

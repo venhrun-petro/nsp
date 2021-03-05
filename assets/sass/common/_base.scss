@@ -14,10 +14,6 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
-
-  @include xsl {
-    padding: 0 10px;
-  }
 }
 
 .container-small {
@@ -25,10 +21,6 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1060px;
-
-  @include xsl {
-    padding: 0 10px;
-  }
 }
 
 .row {

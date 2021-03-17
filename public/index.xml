@@ -15,6 +15,15 @@
     </item>
     
     <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Privacy Policy</title>
       <link>/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,6 +47,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Новини</title>
+      <link>/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Новини</title>
+      <link>/product-cart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/product-cart/</guid>
       <description></description>
     </item>
     

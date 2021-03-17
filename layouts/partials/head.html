@@ -58,15 +58,12 @@
   {{ end -}}
 
 
-   {{ $sass := resources.Get "sass/main.scss" }}
+  {{ $sass := resources.Get "sass/main.scss" }}
   {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/myscss")) }}
   {{ $style := $sass | resources.ToCSS $options }} 
   <link rel="stylesheet" href="{{ $style.Permalink | absLangURL }}">
- <!--
-  {{ $externals := slice "react" "react-dom" }}
-  {{ $defines := dict "process.env.NODE_ENV" `"development"` }}
 
-  {{ $opts := dict "targetPath" "main.js" "externals" $externals "defines" $defines }}
-  {{ $built := resources.Get "js/main.js" | js.Build $opts }} -->
-<script type="text/javascript" src="{{ "main.js" | absLangURL }}" defer></script>
+ 
+
+<!-- <script type="text/javascript" src="{{ "main.js" | absLangURL }}" defer></script> -->
 </head>

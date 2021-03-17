@@ -1,5 +1,5 @@
-// @import "./vendors/slick.scss";
-// @import "./vendors/slick-theme.scss";
+@import "./dependencies/slick.scss";
+@import "./dependencies/slick-theme.scss";
 
 @import './common/reset';
 @import './common/vars';
@@ -11,11 +11,27 @@
 @import './layout/header';
 @import './layout/burger';
 @import './layout/footer';
+@import './layout/nav';
 
 @import './components/content';
 @import './components/product';
 @import './components/bonus';
 @import './components/news';
+@import './components/search';
+@import './components/social';
+@import './components/form-simple';
+@import './components/short-cart';
+@import './components/certificates';
+@import './components/cosmetic-cart';
+@import './components/diagnostics-cart';
 
 @import './objects/button';
 @import './objects/products';
+@import './objects/widget';
+@import './objects/contact';
+@import './objects/page-404';
+@import './objects/cart';
+@import './objects/tabs';
+@import './objects/cosmetic';
+@import './objects/popular-product';
+@import './objects/diagnostics';

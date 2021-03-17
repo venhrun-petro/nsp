@@ -1,0 +1,140 @@
+.v-nav {
+   display: flex;
+   justify-content: center;
+   flex-grow: 1;
+   padding-top: 20px;
+   align-items: flex-start;
+
+   @include lg {
+    padding-top: 0;
+   }
+
+   @include sm {
+    flex-grow: 0;
+   }
+
+   &__list {
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-start;
+     margin: 0;
+     padding: 0;
+
+     @include lg {
+      flex-direction: column;
+    }
+   }
+
+   &__items {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     max-width: 200px;
+     list-style: none;
+     position: relative;
+
+     img {
+      transition: 0.3s all;
+    }
+
+    &.active img{
+      transform: rotate(180deg);
+    }
+
+     @include lg {
+      flex-direction: column;
+     }
+
+     &:not(:last-child) {
+       margin-right: 35px;
+
+       @include lg {
+        margin-right: 0;
+        margin-bottom: 20px;
+       }
+     }
+     
+
+     &:hover > div {
+      @include min-lg {
+        display: block;
+        cursor: pointer;
+      }
+     }
+
+     &:hover > a,
+     &.active > a {
+       color: $color-green-2;
+     }
+   }
+
+   &__link {
+    flex-grow: 1;
+    text-align: center;
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-red-2;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include lg {
+      width: 100%;
+      max-width: 140px;
+      margin: 0 auto;
+      justify-content: space-between;
+      display: flex;
+      text-align: left;
+    }
+   }
+
+   &__children {
+     display: none;
+     position: absolute;
+     left: 50%;
+     top: 100%;
+     width: 180px;
+     padding: 15px;
+     transform: translateX(-50%);
+     border: 1px solid $color-green-2;
+     border-radius: 5px;
+     background: $color-green;
+
+     @include lg {
+      position: relative;
+      transform: translateX(0);
+      left: 0;
+      width: 240px;
+      border: none;
+      padding: 30px 0 5px;
+     }
+
+     &.active {
+      display: block;
+     }
+   }
+
+   &__children-link {
+    display: block;
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    color: $color-green-2;
+    text-decoration: none;
+    transition: 0.3s all;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      color: $color-red-2;
+      cursor: pointer;
+    }
+   }
+}

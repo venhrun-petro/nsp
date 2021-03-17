@@ -1,0 +1,12 @@
+.o-cart {
+  background: #F5FFD8;
+  border: 1px solid #457759;
+  border-radius: 20px;
+  padding: 35px 70px 70px;
+  
+
+  &__cont {
+    display: flex;
+    flex-direction: column;
+  }
+}

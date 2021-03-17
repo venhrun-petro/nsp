@@ -1,0 +1,57 @@
+.o-page-404 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 132px 0 220px;
+
+  @include sm {
+    padding: 55px 0 140px;
+  }
+
+  &__container {
+    @extend .container-small;
+  } 
+  
+  &__cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: 300px;
+    line-height: 352px;
+    color: $color-green-2;
+    margin: 0 0 45px;
+
+    @include sm {
+      font-size: 135px;
+      line-height: 150px;
+    }
+  }
+
+  &__decription {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 41px;
+    color: $color-green-2;
+    margin: 0;
+
+    @include sm {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    & > a {
+      font-size: inherit;
+      line-height: inherit;
+      color: $color-blue;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+   
+}

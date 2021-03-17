@@ -1,0 +1,99 @@
+.c-diagnostics-cart {
+  display: flex;
+  position: relative;
+  background: radial-gradient(188.8% 958.06% at 1.75% 0%, #C1E6F8 19.02%, #3A8CBC 89.66%);
+  border-radius: 15px;
+  padding: 7px;
+  width: 100%;
+  max-width: 570px;
+  margin: 0 15px 20px;
+
+  &__line {
+    display: flex;
+    flex-grow: 1;
+    border: 3px solid #FFFFFF;
+    border-radius: 15px;
+    padding: 40px 60px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    height: 100%;
+    max-width: 240px;
+    object-fit: contain;
+  }
+
+  &__hover {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #1275B0;
+    padding: 50px 60px;
+    transform: scaleX(0);
+    transition: 0.3s all;
+
+    & h2, & p {
+      color: #fff;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #1275B0;
+    margin: 0 0 30px;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 210px;
+    font-family: $font-roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #2D3026;
+  }
+
+  &:hover > &__hover {
+    transform: scaleX(1);
+  }
+
+  &__btn {
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
+    padding: 17px 50px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    @include sm {
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

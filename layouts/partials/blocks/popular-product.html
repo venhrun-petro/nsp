@@ -1,0 +1,17 @@
+<div class="o-popular-product">
+    <h3 class="o-popular-product__title">Надіслати повідомлення</h3>
+    <div class="o-popular-product__cont"
+      data-slick-global data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "dots": true, "arrows": false, "responsive": [{"breakpoint": 980, "settings": {"slidesToShow": 2, "slidesToScroll": 1, "dots": true} },{"breakpoint": 767, "settings": {"slidesToShow": 1, "slidesToScroll": 1, "dots": false} }]}'
+    >
+    {{- with .Params.product -}}
+        {{- range . -}}
+          <div>
+            {{ partial "component/product" (dict "class" "o-products__item" "Params" .) . }} 
+          </div>
+        {{- end -}}  
+    {{- end -}} 
+    </div>
+    {{- with .Params.button -}}
+    <a class="o-popular-product__btn">{{ . }}</a>
+    {{- end -}} 
+</div>

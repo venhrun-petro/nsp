@@ -1,0 +1,23 @@
+.c-short-cart {
+   display: grid;
+   justify-content: space-between;
+  //  grid-template-areas:
+  //  'img title title'
+  //  'img decription decription'
+  //  'img decription decription';
+  grid-template-columns: max-content 1fr 1fr;
+  grid-template-rows: max-content 1fr;
+
+   &__title {
+      
+    //  grid-area: title;
+   }
+
+   &__img-cont {
+    //  grid-area: img;
+   }
+
+   &__right {
+    // grid-area: decription;
+   }
+}

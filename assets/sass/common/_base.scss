@@ -3,9 +3,17 @@ body {
   font-family: $font-roboto;
   font-size: 14px;
   background-color: $color-green;
+  overflow-x: hidden;
 
   & * {
     box-sizing: border-box;
+  }
+
+  &.no-scroll-sm {
+    @include sm {
+      overflow: hidden;
+      max-height: 100vh;
+    }
   }
 }
 
@@ -14,6 +22,10 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+
+  @include sm {
+    padding: 0 10px;
+  }
 }
 
 .container-small {
@@ -21,11 +33,36 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1060px;
+
+  @include sm {
+    padding: 0 10px;
+  }
 }
 
 .row {
   margin: 0 -15px;
   @include sm {
     margin: 0;
+  }
+}
+
+.h-hidden-to-md {
+  @include md {
+    display: none !important;
+  }
+}
+
+.h-hidden-from-md {
+  @include min-md {
+    display: none !important;
+  }
+}
+
+/* variable --screen is used in Javascript */
+:root {
+  --screen: xs;
+
+  @media (min-width: 767px) {
+    --screen: sm;
   }
 }

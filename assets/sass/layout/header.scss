@@ -1,1 +1,188 @@
- 
+.v-header {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ max-width: 100%;
+ background-color: radial-gradient(56.81% 56.81% at 66.67% 56.81%, #E3EFC9 0%, #D7E8B1 56.87%, #C0DA81 100%);
+
+ @include lg {
+  background: $color-green-2;
+ }
+
+ &__container {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1440px;
+   padding: 0 15px;
+   position: relative;
+   z-index: 2;
+
+   @include sm {
+    padding: 0 10px;
+   }
+ }
+
+ &__cont {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 15px;
+
+    @include lg {
+      align-items: center;
+      padding: 5px 0;
+    }
+ }
+
+ &__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+
+  @include lg {
+    max-width: none;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+ }
+
+ &__logo {
+   cursor: pointer;
+   text-decoration: none;
+   margin-bottom: 10px;
+
+   @include lg {
+    max-width: 87px;
+    max-height: 50px;
+    margin-bottom: 0;
+   }
+ }
+
+ &__logo-img {
+   max-width: 100%;
+   max-height: 100%;
+ }
+
+ &__bg {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center bottom;
+   z-index: 1;
+
+   @include lg {
+    display: none;
+   }
+ }
+
+ &__info {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   min-width: 190px;
+   padding-left: 10px;
+
+   @include lg {
+    padding-left: 0;
+    margin-top: 35px;
+   }
+ }
+
+ &__actions {
+  font-family: $font-roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 27px;
+  color: $color-blue;
+  margin: 0 0 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include lg {
+    text-align: center;
+    margin: 0 0 15px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+ }
+
+ &__social {
+  margin-top: 5px;
+
+  @include lg {
+    margin-top: 20px;
+  }
+ }
+
+ &__right {
+  display: flex;
+  flex-grow: 1;
+  transition: 0.3s all;
+  
+  @include lg {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: $color-green;
+    width: 100%;
+    max-width: 320px; 
+    flex-direction: column;  
+    padding: 30px 20px;
+    border-radius: 15px;
+    transform: translate(100%, 0);
+  }
+
+  @include sm {
+    height: calc(100vh - 60px);
+    max-width: 100%;
+    display: initial;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  &.active {
+    @include lg {
+      transform: translate(0, 0);
+    }
+  }
+ }
+
+ &__close {
+  display: none;
+  min-width: 30px;
+  cursor: pointer;
+
+  &.active {
+    display: block;
+  }
+ }
+
+ &__icons {
+   display: none;
+   align-items: center;
+
+   @include lg {
+    display: flex;
+   }
+ }
+
+ &__icon {
+   width: 30px;
+   height: 30px;
+   background-color: $color-green-3;
+
+   &:not(:last-child) {
+     margin-right: 10px;
+   }
+ }
+}

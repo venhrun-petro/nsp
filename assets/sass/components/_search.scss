@@ -1,0 +1,82 @@
+.c-search {
+  display: flex;
+  position: relative;
+  transition: 0.3s all;
+
+  @include lg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: scaleX(0);
+  }
+
+  &.active {
+    transform: scaleX(1);
+  }
+
+  &__input {
+    background: #fff;
+    border: 3px solid $color-green-2;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 90px 10px 20px;
+    font-size: 22px;
+    color: $color-green-2;
+    line-height: 30px;
+    font-family: $font-roboto;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    @include lg {
+      height: 50px;
+      width: 100%;
+      padding: 20px 20px;
+      border-radius: 25px;
+      border: none;
+    }
+  }
+
+  &__button {
+    @include btn-clear();
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 72px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    background: $color-green-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    border: 3px solid $color-green-2;
+
+    &:hover {
+      background: #fff;
+      cursor: pointer;
+
+      & > div {
+        background: $color-green-2;
+      }
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__icons {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    transition: 0.3s all;
+  }
+}

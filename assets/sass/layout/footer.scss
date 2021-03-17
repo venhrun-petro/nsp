@@ -1,1 +1,135 @@
- 
+.v-footer {
+  display: flex;
+  justify-content: center;
+  background: $color-green-6;
+  padding-bottom: 25px;
+
+  &__container {
+    @extend .container;
+
+    position: relative;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+
+    @include md {
+      flex-wrap: wrap;
+    }
+
+    @include sm {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 99;
+
+    @include sm {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    padding: 110px 0 0;
+    width: 70%;
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      padding: 130px 0 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__widget {
+    margin: 0 15px;
+  }
+
+  &__right {
+    width: 30%;
+    padding-top: 60px;
+    margin: 0 15px;
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin: 60px 15px 0;
+
+    @include md {
+      margin: 20px 15px 0;
+    }
+
+    @include sm {
+      margin: 60px 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__social {
+    margin-right: 50px;
+
+    @include sm {
+      margin: 0 0 30px 0;
+    }
+
+    .c-social__icon {
+      width: 40px;
+      height: 40px;
+      background-color: $color-green-3;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__info {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: $color-green-3;
+    width: 100%;
+    max-width: 370px;
+    margin: 0;
+
+    @include sm {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

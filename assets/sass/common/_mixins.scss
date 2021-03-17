@@ -28,6 +28,12 @@
   }
 }
 
+@mixin min-sm {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 @mixin xsl {
   @media (max-width: 576px) {
     @content;

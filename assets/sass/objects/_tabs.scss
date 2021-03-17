@@ -1,0 +1,45 @@
+.o-tabs {
+  display: flex;
+  padding: 60px 0;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__cont {
+    display: flex;
+    border: 3px solid #457759;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: #D4F0B3;
+    margin: 0 0 60px;
+  }
+  &__items {
+    flex-grow: 1;
+    min-width: 33%;
+    padding: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    color: #457759;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s all;
+
+    &:not(:first-child) {
+      border-left: 3px solid #457759;
+    }
+
+    &:hover,
+    &.active {
+      background-color: #457759;
+      color: #fff;
+    }
+  }
+
+  &__btn-arrow {
+    display: none;
+  }
+}

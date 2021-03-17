@@ -16,33 +16,76 @@ favicon = "img/svg/icon.svg"
 logo = "img/logo.png"
 rss = true
 url = "/"
-
-
 [[menu.main]]
-name = "The Challenge"
-url = "/the-challenge/"
+name = "Про NSP"
+url = "#"
 weight = 1
+identifier = "NSP"
 [[menu.main]]
-name = "Our Solution"
-url = "our-solution/"
+name = "Якість продукції"
+url = "#"
+weight = 1
+parent = "NSP"
+[[menu.main]]
+name = "Наука та лабораторія"
+url = "#"
+weight = 2
+parent = "NSP"
+[[menu.main]]
+name = "Реєстрація та сертифікація"
+url = "#"
+weight = 3
+parent = "NSP"
+[[menu.main]]
+name = "Порівняння з конкурентами"
+url = "#"
+weight = 4
+parent = "NSP"
+[[menu.main]]
+name = "Прайс-лист КАТАЛОГ"
+url = "#"
 weight = 2
 [[menu.main]]
-name = "Our Technology"
-url = "/our-technology/"
+name = "Доставка"
+url = "#"
 weight = 3
 [[menu.main]]
-name = "Projects"
-url = "/projects/"
+name = "Покупцям"
+url = "#"
 weight = 4
+identifier = "by"
 [[menu.main]]
-name = "Who We Are"
-url = "/who-we-are/"
+name = "Компьютерна діагностика"
+url = "/computer-diagnostics/"
+weight = 1
+parent = "by"
+[[menu.main]]
+name = "Схеми застосування"
+url = "#"
+weight = 2
+parent = "by"
+[[menu.main]]
+name = "Новини"
+url = "#"
+weight = 3
+parent = "by"
+[[menu.main]]
+name = "Статті"
+url = "/article/"
+weight = 4
+parent = "by"
+[[menu.main]]
+name = "Система бонусів"
+url = "/bonus/"
 weight = 5
+parent = "by"
 [[menu.main]]
-name = "Get Involved"
-url = "/get-involved/"
+name = "Контакти"
+url = "/contact"
 weight = 6
-[permalinks]
+parent = "by"
+
+ 
 
 
 DefaultContentLanguage = "en"

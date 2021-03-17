@@ -1,4 +1,202 @@
-<footer class="footer">
-   
+<footer class="v-footer">
+   <div class="v-footer__container">
+      <div class="v-footer__row">
+          <a class="v-footer__logo">
+            <img class="v-footer__logo-img" src="{{ "img/logo-footer.png" | absURL }}" alt="close" >
+          </a>
+          <div class="v-footer__left">
+              <div class="v-footer__list">
+                  <div class="o-widget v-footer__widget">
+                    <ul data-nav-wrapper>
+                      <li data-nav-items>
+                        <a href="/contact" data-nav-link>Контакти</a>
+                        <ul data-nav-children>
+                          <li>
+                            <a href="tel:+38 (044) 228-33-28">+38 (044) 228-33-28</a>
+                          </li>
+                          <li>
+                            <a href="tel:+38 (063) 880-10-08">+38 (063) 880-10-08</a>
+                          </li>
+                          <li>
+                            <a href="mailto:nspinfo@i.ua">nspinfo@i.ua</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="" data-nav-link>Прайс-лист</a>
+                      </li>
+                      <li>
+                        <a href="" data-nav-link>Доставка</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="o-widget  v-footer__widget">
+                    <ul data-nav-wrapper>
+                      <li data-nav-items>
+                        <a href="" data-nav-link>Клієнтам 
+                          <img src="{{ "img/svg/arrow-down-white.svg" | absURL }}" alt="arrow" data-nav-arrow>
+                        </a>
+                        <ul data-nav-children>
+                          <li>
+                            <a href="/computer-diagnostics/">Компьютерна діагностика</a>
+                          </li>
+                          <li>
+                            <a href="#">Схеми застосування</a>
+                          </li>
+                          <li>
+                            <a href="#">Новини</a>
+                          </li>
+                          <li>
+                            <a href="/article/">Статті</a>
+                          </li>
+                          <li>
+                            <a href="/bonus/">Система бонусів</a>
+                          </li>
+                          <li>
+                            <a href="/contact">Контакти</a>
+                          </li>
+                        </ul>
+                      </li> 
+                    </ul>
+                  </div>
+                  <div class="o-widget  v-footer__widget">
+                    <ul data-nav-wrapper>
+                      <li data-nav-items>
+                        <a href="" data-nav-link>Про NSP
+                          <img src="{{ "img/svg/arrow-down-white.svg" | absURL }}" alt="arrow" data-nav-arrow>
+                        </a>
+                        <ul data-nav-children>
+                          <li>
+                            <a href="#">Наука та лабораторія</a>
+                          </li>
+                          <li>
+                            <a href="#">Реєстрація та сертифікація</a>
+                          </li>
+                          <li>
+                            <a href="#">Якість продукції</a>
+                          </li>
+                          <li>
+                            <a href="#">Порівняння з конкурентами</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="v-footer__bottom h-hidden-to-md">
+                <div class="c-social v-footer__social">
+                  <a class="c-social__link" href="#">
+                    <div class="c-social__icon"
+                    style="
+                    mask-image: url('{{ "img/svg/telegram.svg" | absURL }}');
+                    -webkit-mask-image: url('{{ "img/svg/telegram.svg" | absURL }}');
+                    mask-size: contain;
+                    -webkit-mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    "
+                    ></div>
+                  </a>
+                  <a class="c-social__link" href="#">
+                    <div class="c-social__icon"
+                    style="
+                    mask-image: url('{{ "img/svg/viber.svg" | absURL }}');
+                    -webkit-mask-image: url('{{ "img/svg/viber.svg" | absURL }}');
+                    mask-size: contain;
+                    -webkit-mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    "
+                    ></div>
+                  </a> 
+                  <a class="c-social__link" href="#">
+                    <div class="c-social__icon"
+                    style="
+                    mask-image: url('{{ "img/svg/facebook.svg" | absURL }}');
+                    -webkit-mask-image: url('{{ "img/svg/facebook.svg" | absURL }}');
+                    mask-size: contain;
+                    -webkit-mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    "
+                    ></div>
+                  </a> 
+                  <a class="c-social__link" href="#">
+                    <div class="c-social__icon"
+                    style="
+                    mask-image: url('{{ "img/svg/instagram.svg" | absURL }}');
+                    -webkit-mask-image: url('{{ "img/svg/instagram.svg" | absURL }}');
+                    mask-size: contain;
+                    -webkit-mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    "
+                    ></div>
+                  </a> 
+                </div>
+                <p class="v-footer__info"><span>© 2012-{{ now.Format "2006"}}</span> НСП в Україні — здоров’я та сила природи. 
+                  Інтернет-магазин БАД.</p>
+              </div>
+          </div>
+          <div class="v-footer__right">
+            {{ partial "component/form-simple" . }} 
+          </div>
+          <div class="v-footer__bottom h-hidden-from-md">
+            <div class="c-social v-footer__social">
+              <a class="c-social__link" href="#">
+                <div class="c-social__icon"
+                style="
+                mask-image: url('{{ "img/svg/telegram.svg" | absURL }}');
+                -webkit-mask-image: url('{{ "img/svg/telegram.svg" | absURL }}');
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                "
+                ></div>
+              </a>
+              <a class="c-social__link" href="#">
+                <div class="c-social__icon"
+                style="
+                mask-image: url('{{ "img/svg/viber.svg" | absURL }}');
+                -webkit-mask-image: url('{{ "img/svg/viber.svg" | absURL }}');
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                "
+                ></div>
+              </a> 
+              <a class="c-social__link" href="#">
+                <div class="c-social__icon"
+                style="
+                mask-image: url('{{ "img/svg/facebook.svg" | absURL }}');
+                -webkit-mask-image: url('{{ "img/svg/facebook.svg" | absURL }}');
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                "
+                ></div>
+              </a> 
+              <a class="c-social__link" href="#">
+                <div class="c-social__icon"
+                style="
+                mask-image: url('{{ "img/svg/instagram.svg" | absURL }}');
+                -webkit-mask-image: url('{{ "img/svg/instagram.svg" | absURL }}');
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                "
+                ></div>
+              </a> 
+            </div>
+            <p class="v-footer__info"><span>© 2012-{{ now.Format "2006"}}</span> НСП в Україні — здоров’я та сила природи. 
+              Інтернет-магазин БАД.</p>
+          </div>
+      </div>
+      </div>
+    </div>  
 </footer>
  

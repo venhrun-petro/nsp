@@ -1,1 +1,22 @@
- 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 27px;
+  min-width: 30px;
+
+  @include lg {
+    display: flex;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__line {
+    width: 100%;
+    background-color: $color-green-3;
+    height: 4px;
+    border-radius: 3px;
+  }
+}

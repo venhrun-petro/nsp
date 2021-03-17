@@ -1,0 +1,52 @@
+.c-cosmetic-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px 140px;
+  margin: 0 15px 40px;
+  background: radial-gradient(100% 100% at 50.12% 0%, #F2F7E8 0%, #CEE0A6 100%);
+  border: 3px solid #669927;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 370px;
+  position: relative;
+
+  @include sm {
+    padding: 15px 25px 120px;
+    margin: 0 0 15px;
+    max-width: 300px;
+  }
+
+  &__title {
+    font-family: $font-roboto;
+    width: 100%;
+    max-width: 250px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    color: #1275B0;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+
+    @include sm {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: -35px;
+    left: 15px;
+    width: calc(100% - 30px);
+    max-height: 195px;
+    z-index: 2;
+
+    @include sm {
+      max-height: 150px;
+      bottom: -20px;
+    }
+  }
+}

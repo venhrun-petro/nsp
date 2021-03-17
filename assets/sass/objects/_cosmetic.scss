@@ -1,0 +1,19 @@
+.o-cosmetic {
+  display: flex;
+  padding: 50px 0 10px;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @include sm {
+      margin: 0;
+    }
+  }
+}

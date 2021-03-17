@@ -1,0 +1,85 @@
+.o-popular-product {
+  padding: 15px 0 30px;
+
+  @include sm {
+    padding: 35px 0 25px;
+  }
+
+  &__title {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1275B0;
+    margin: 0 auto 15px;
+
+    @include sm {
+      margin: 0 auto 5px;
+    }
+  }
+
+  &__cont {
+    @extend .container;
+
+    padding: 15px 0 40px;
+    margin-bottom: 0 !important;
+
+    @include sm {
+      padding: 0 0 5px;
+    }
+
+    .slick-slide {
+      padding: 15px;
+    }
+
+    .o-products__item {
+      margin: 0 auto;
+    }
+
+    .slick-dots {
+      bottom: 20px;
+
+      li {
+        width: 17px;
+        height: 17px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 0 8px;
+        transition: 0.3s all;
+
+        &.slick-active {
+          background-color: #98AA42;
+        }
+
+        button:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: table;
+    border: 3px solid #457759; 
+    border-radius: 30px;
+    padding: 15px 45px;
+    margin: 0 auto;
+    font-family: $font-roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #457759;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    @include sm {
+      padding: 12px 30px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

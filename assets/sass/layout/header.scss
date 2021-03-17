@@ -3,6 +3,7 @@
  display: flex;
  justify-content: center;
  max-width: 100%;
+ z-index: 999;
  background-color: radial-gradient(56.81% 56.81% at 66.67% 56.81%, #E3EFC9 0%, #D7E8B1 56.87%, #C0DA81 100%);
 
  @include lg {

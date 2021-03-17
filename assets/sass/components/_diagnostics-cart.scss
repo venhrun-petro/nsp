@@ -8,12 +8,21 @@
   max-width: 570px;
   margin: 0 15px 20px;
 
+  @include sm {
+    padding: 10px;
+    margin: 0 0 20px;
+  }
+
   &__line {
     display: flex;
     flex-grow: 1;
     border: 3px solid #FFFFFF;
     border-radius: 15px;
     padding: 40px 60px;
+
+    @include sm {
+      padding: 20px;
+    }
   }
 
   &__img {
@@ -23,6 +32,12 @@
     height: 100%;
     max-width: 240px;
     object-fit: contain;
+
+    @include sm {
+      max-height: 165px;
+      top: auto;
+      bottom: 15px;
+    }
   }
 
   &__hover {
@@ -39,6 +54,15 @@
     padding: 50px 60px;
     transform: scaleX(0);
     transition: 0.3s all;
+
+    @include sm {
+      flex-direction: column;
+      padding: 20px;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
 
     & h2, & p {
       color: #fff;
@@ -60,6 +84,11 @@
     text-transform: uppercase;
     color: #1275B0;
     margin: 0 0 30px;
+
+    @include sm {
+      line-height: 35px;
+      margin: 0 0 5px;
+    }
   }
 
   &__text {
@@ -71,6 +100,12 @@
     font-size: 20px;
     line-height: 23px;
     color: #2D3026;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 130px;
+    }
   }
 
   &:hover > &__hover {

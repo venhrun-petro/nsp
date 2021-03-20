@@ -1,0 +1,10 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<div class="c-product-about"> 
+    <div class="c-product-about__left">
+        {{ .Inner }}
+    </div>
+    <div class="c-product-about__right">
+        {{ with .Get `descriptions` }}<p>{{ . }}</p>{{ end }}
+        <img {{ with .Get `src` }} src="{{ . }}"{{ end }} alt="product-img">
+    </div>
+ </div>

@@ -1,12 +1,103 @@
 .o-cart {
-  background: #F5FFD8;
-  border: 1px solid #457759;
+  background: $color-green-3;
+  border: 1px solid $color-green-2;
   border-radius: 20px;
   padding: 35px 70px 70px;
   
+  @include sm {
+    padding: 45px 20px 170px;
+  }
+
+  @include xs {
+    margin: 0 -15px;
+    padding: 45px 10px 170px;
+  }
 
   &__cont {
     display: flex;
     flex-direction: column;
+  }
+
+  &__content {
+    margin: 60px 0 0;
+
+    h1, h2 , h3, h4, h5, h6{
+      font-family: $font-amsterdam;
+      font-weight: normal;
+      color: $color-green-2;
+      margin: 0 0 30px;
+      text-transform: uppercase;
+
+      @include sm {
+        margin: 0 0 15px;
+      }
+    }
+
+    h1 {
+      @extend .h1;
+
+      @include sm {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    h2 {
+      @extend .h2;
+
+      @include sm {
+        font-size: 34px;
+        line-height: 44px;
+      }
+    }
+
+    h3 {
+      @extend .h3;
+
+      @include sm {
+        font-size: 28px;
+        line-height: 40px;
+      }
+    }
+
+    h4 {
+      @extend .h4;
+
+      @include sm {
+        font-size: 26px;
+        line-height: 38px;
+      }
+    }
+
+    h5 {
+      @extend .h5;
+
+      @include sm {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+
+    h6 {
+      @extend .h6;
+    }
+
+    p {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 32px;
+      color: $color-black-2;
+      padding-left: 30px;
+      margin: 0 0 45px;
+
+      @include sm {
+        margin: 0 0 30px;
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 0;
+      }
+    }
   }
 }

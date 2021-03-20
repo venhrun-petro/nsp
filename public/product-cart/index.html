@@ -47,8 +47,11 @@
   
    
   <link rel="stylesheet" href="/css/style.css">
+
+   
+  <script type="text/javascript" src="main.js" defer></script>
+
  
-<script type="text/javascript" src="/main.js" defer></script>
 </head>
 
   <body>
@@ -250,21 +253,23 @@
   </div>
   <img class="v-header__bg" src="/img/waves.png" alt="bg" >
 </header>
-<section class="c-content">
-        <div class="c-content__container">
-            <div class="c-content__info">
-                <h1 id="новини">Новини</h1>
 
-            </div> 
-        </div>
-    </section><div class="o-tabs">
+     
+<section class="c-content">
+    <div class="c-content__container">
+        <div class="c-content__info"><h1 id="новини">Новини</h1>
+
+        </div> 
+    </div>
+</section>
+ <div class="o-tabs">
   <div class="o-tabs__container">
-    <div class="o-tabs__cont">
-      <div class="o-tabs__items">Косметика по догляду</div>
-      <div class="o-tabs__items">БАДи</div>
-      <div class="o-tabs__items">Декоративна косметика</div>
-      <button class="o-tabs__btn-arrow">
-        <span class="o-tabs__icon c-social__icon"
+    <div class="o-tabs__cont" data-tabs-wrapper='0'>
+      <div class="o-tabs__items" data-tabs>Косметика по догляду</div>
+      <div class="o-tabs__items" data-tabs>БАДи</div>
+      <div class="o-tabs__items" data-tabs>Декоративна косметика</div>
+      <button class="o-tabs__btn-arrow" data-tabs-arrow>
+        <span class="o-tabs__icon"
                 style="
                 mask-image: url('/img/svg/arrow-down.svg');
                 -webkit-mask-image: url('/img/svg/arrow-down.svg');
@@ -277,7 +282,7 @@
       </button>
     </div>
 
-    <div class="o-tabs__view">
+    <div class="o-tabs__view" data-tabs-view>
       <div class="o-cart"> 
         <div class="o-cart__cont">
             <div class="c-short-cart">
@@ -286,21 +291,22 @@
                 </div>
                 <h2 class="c-short-cart__title">Хлорофілл рідкий (Chlorophyll liquid)</h2>
                 <div class="c-short-cart__right">
-                  <p class="c-short-cart__decription">
-                    Хлорофілл рідкий (Chlorophyll liquid)<br>
-В упаковці 473 мілілітра.
-                  </p>
+                  <div class="c-short-cart__decription">
+                    <p>Поддерживает иммунную систему организма, повышает жизненный тонус.</p>
+<p>В упаковці 473 мілілітра.</p>
+
+                  </div>
                   <p class="c-short-cart__have">в наявності</p>
                   <p class="c-short-cart__price">699.97 грн</p>
                   <button class="c-short-cart__btn">Додати в кошик</button>
                 </div>
             </div>
-            <div class="c-cart-content o-cart__content">
+            <div class="c-cart__content o-cart__content">
               <h3 id="свойства">Свойства:</h3>
 <p>поддерживает и стимулирует кроветворную систему;<br>
 способствует обновлению тканей и быстрому заживлению ран;<br>
 участвует в профилактике мочекаменной болезни;<br>
-поддерживает иммунную систему организма;повышает жизненный тонус.\</p>
+поддерживает иммунную систему организма;повышает жизненный тонус.</p>
 <h3 id="показания-к-применению">Показания к применению:</h3>
 <p>Для быстрого насыщения организма хлорофиллом рекомендуем использовать Хлорофилл жидкий, для стойкого и пролонгированного эффекта  — Хлорофилл в капсулах.<br>
 В составе хлорофилла имеется витамин К, что делает его прекрасным средством для профилактики мочекаменной болезни, так как он сдерживает образование кристаллов оксалата кальция в моче.
@@ -351,7 +357,7 @@
 Кожа, волосы и ногти</p>
 
               <div class="c-certificates">
-    <h3 class="c-certificates__title">Надіслати повідомлення</h3>
+    <h3 class="c-certificates__title">Сертификаты «Хлорофилл жидкий (Chlorophyll liquid)»</h3>
     <div class="c-certificates__cont"
       data-slick-mobail
       data-slick='{
@@ -378,15 +384,15 @@
         </div> 
       </div>
     </div>
-    <div class="o-tabs__view">
+    <div class="o-tabs__view" data-tabs-view>
       2
     </div>
-    <div class="o-tabs__view">
+    <div class="o-tabs__view" data-tabs-view>
       3
     </div>
   </div>
 </div>
- <footer class="v-footer">
+<footer class="v-footer">
    <div class="v-footer__container">
       <div class="v-footer__row">
           <a class="v-footer__logo">

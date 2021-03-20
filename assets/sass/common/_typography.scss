@@ -149,6 +149,7 @@ audio:not([controls]) {
   line-height: 52px;
   color: $color-blue;
   margin: 0;
+
   & *{
     font-size: inherit;
     line-height: inherit; 
@@ -167,6 +168,7 @@ audio:not([controls]) {
   font-weight: 400; 
   color: $color-blue;
   margin: 0;
+
   & *{
     font-size: inherit;
     line-height: inherit; 
@@ -185,6 +187,7 @@ audio:not([controls]) {
   font-weight: 400;
   color: $color-blue;
   margin: 0;
+
   & *{
     font-size: inherit;
     line-height: inherit; 
@@ -198,6 +201,7 @@ audio:not([controls]) {
   line-height: 46px;
   color: $color-blue;
   margin: 0;
+
   & *{
     font-size: inherit;
     line-height: inherit; 

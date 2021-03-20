@@ -1,0 +1,12 @@
+.c-product-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin: 0 0 30px;
+
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    margin: 0 0 15px;
+  }
+}

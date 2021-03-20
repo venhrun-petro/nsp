@@ -1,0 +1,111 @@
+<div class="o-articles">
+  <div class="o-articles__container">
+    <div class="o-articles__row">
+      <a class="o-articles__btn o-articles__btn--prev" href="#">
+        <span class="o-articles__circle">
+          <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21L2 11L12 1" stroke="#457759" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </span>
+      </a>
+      <div class="o-articles__title">{{ .Params.title }}</div>
+      <a class="o-articles__btn o-articles__btn--next" href="#">
+        <span class="o-articles__circle">
+          <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 21L11 11L1 1" stroke="#457759" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <p class="o-articles__date">АВТОР | ДАТА</p>
+    <div class="o-articles__img-cont">
+      <img class="o-articles__img" src="{{ .Params.img | absURL }}" alt="articles"/>
+      <img class="o-articles__img" src="{{ .Params.img | absURL }}" alt="articles"/>
+    </div>
+     
+    <div class="o-articles__content">
+      <p>
+        Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Tempore hic quaerat veniam blanditiis incidunt cum minus esse nobis alias enim, earum ex voluptates autem maxime laudantium recusandae debitis, dignissimos, fuga.Lorem, ipsum, dolor sit amet consectetur adipisicing elit. 
+      </p>
+    </div>
+    <div class="o-articles__tags">
+      <a href="#">TAGS</a>
+      <a href="#">TAGS</a>
+      <a href="#">TAGS</a>
+      <a href="#">TAGS</a>
+      <a href="#">TAGS</a>
+      <a href="#">TAGS</a>
+    </div>
+    <div class="o-articles__social">
+      <p class="o-articles__social-title">Поділитися</p>
+      <div class="c-social">
+          <a class="c-social__link" href="#">
+            <div class="c-social__icon"
+            style="
+            mask-image: url('{{ "img/svg/telegram.svg" | absURL }}');
+            -webkit-mask-image: url('{{ "img/svg/telegram.svg" | absURL }}');
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            "
+            ></div>
+          </a>
+          <a class="c-social__link" href="#">
+            <div class="c-social__icon"
+            style="
+            mask-image: url('{{ "img/svg/viber.svg" | absURL }}');
+            -webkit-mask-image: url('{{ "img/svg/viber.svg" | absURL }}');
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            "
+            ></div>
+          </a> 
+          <a class="c-social__link" href="#">
+            <div class="c-social__icon"
+            style="
+            mask-image: url('{{ "img/svg/facebook.svg" | absURL }}');
+            -webkit-mask-image: url('{{ "img/svg/facebook.svg" | absURL }}');
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            "
+            ></div>
+          </a> 
+          <a class="c-social__link" href="#">
+            <div class="c-social__icon"
+            style="
+            mask-image: url('{{ "img/svg/instagram.svg" | absURL }}');
+            -webkit-mask-image: url('{{ "img/svg/instagram.svg" | absURL }}');
+            mask-size: contain;
+            -webkit-mask-size: contain;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            "
+            ></div>
+          </a> 
+        </div>
+      </div>
+      <div class="o-articles__row">
+        <a class="o-articles__btn o-articles__btn--prev" href="#">
+          <span class="o-articles__circle">
+            <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21L2 11L12 1" stroke="#457759" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="o-articles__text">попередня</span>
+        </a>
+        <a class="o-articles__btn o-articles__btn--next" href="#">
+          <span class="o-articles__text">наступна</span>
+          <span class="o-articles__circle">
+            <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 21L11 11L1 1" stroke="#457759" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+  </div>
+</div>

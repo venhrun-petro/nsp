@@ -1,6 +1,11 @@
 .o-tabs {
   display: flex;
   padding: 60px 0;
+  position: relative;
+
+  @include sm {
+    padding: 80px 0 0;
+  }
 
   &__container {
     @extend .container;
@@ -8,38 +13,111 @@
 
   &__cont {
     display: flex;
-    border: 3px solid #457759;
+    border: 3px solid $color-green-2;
     border-radius: 40px;
     overflow: hidden;
-    background-color: #D4F0B3;
+    background-color: $color-green-3;
     margin: 0 0 60px;
+
+    @include sm {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      margin: 0;
+      width: calc(100% - 20px);
+      height: 60px;
+      flex-direction: column;
+      padding: 60px 0 0;
+      z-index: 999;
+      border-radius: 30px;
+      border: 1px solid $color-green-5;
+
+      &.is-active {
+        height: auto;
+        padding: 60px 0 30px;
+      }
+    }
+
+    &.is-active > button {
+      top: 25px;
+      transform: rotate(180deg);
+    }
   }
+
   &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-grow: 1;
     min-width: 33%;
     padding: 20px;
-    font-family: Roboto;
-    font-style: normal;
+    font-family: $font-roboto;
     font-weight: normal;
     font-size: 27px;
     line-height: 32px;
-    color: #457759;
+    color: $color-green-2;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s all;
+    transition: background-color 0.3s;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 17px 20px 0 17px;
+    }
 
     &:not(:first-child) {
-      border-left: 3px solid #457759;
+      @include min-sm {
+        border-left: 3px solid $color-green-2;
+      }
     }
 
     &:hover,
-    &.active {
-      background-color: #457759;
-      color: #fff;
+    &.is-active {
+      background-color: $color-green-2;
+      color: $color-white;
+    }
+
+    &.is-active {
+      @include sm {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        color: $color-green;
+        padding: 20px;
+      }
     }
   }
 
   &__btn-arrow {
+    @include btn-clear();
+
     display: none;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    transform: translate(0, -50%);
+    transition: 0.3s all;
+
+    @include sm {
+      display: block;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 16px;
+    height: 10px;
+    background-color: $color-green;
+  }
+
+  &__view {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
   }
 }

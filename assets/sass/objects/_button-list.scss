@@ -1,0 +1,48 @@
+.o-button-list {
+  display: flex;
+  margin: 0 0 60px;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin: 0;
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 15px;
+    }
+  }
+
+  &__actions {
+    border: 3px solid #669927;
+    padding: 30px;
+    border-radius: 15px;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    color: #457759;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s all;
+    background: radial-gradient(100% 100% at 50.12% 0%, #F2F7E8 0%, #CEE0A6 100%);
+
+    @include xsl {
+      padding: 12px 30px;
+      font-size: 18px;
+      line-height: 21px;
+      border-radius: 30px;
+    }
+
+    &:hover {
+      border: 3px solid $color-blue;
+      color: $color-blue;
+    }
+  }
+}

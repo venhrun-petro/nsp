@@ -1,0 +1,105 @@
+<section class="o-production-certification">
+    <div class="o-production-certification__container">
+        <h1 class="o-production-certification__title"></h1>
+        {{- with .Params.list -}} 
+            <div class="o-production-certification__cont">
+                {{- range . -}} 
+                    <h3 class="o-production-certification__sub-title">{{ .title }}</h3>
+                    {{- with .items -}} 
+                        <div class="o-production-certification__list">
+                            {{- range . -}} 
+                                <div class="o-production-certification__item">
+                                    <p class="o-production-certification__mane">{{ .name }}</p>
+                                    <img class="o-production-certification__img" src="{{ .img | absURL }}" alt="img" >
+                                </div>
+                            {{- end -}}
+                        </div>
+                     {{- end -}}
+                {{- end -}}
+            </div>
+        {{- end -}}
+    </div>
+</section> 
+<div class="t">
+<div class="cards">
+    <div class="card">
+      <header>
+        <h2>Bristol</h2>
+      </header>
+      
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour1.jpg" alt="Bristol harbour">
+      <div class="body">
+      <p>I live in Bristol. It mostly rains, but when it isn't raining we have hot air balloons.</p>
+        <p>The balloons sometimes congregate for mass launches, raising the possibility of one landing in your garden.</p>
+      </div>
+      
+    </div>
+    
+    <div class="card">
+      <header>
+        <h2>Harbour Cranes</h2>
+      </header>
+      
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+      <div class="body">
+      <p>We also have giant cranes, and historic boats. It is best if the balloons avoid these.</p>
+        
+      </div>
+    </div>
+    <div class="card">
+        <header>
+          <h2>Harbour Cranes</h2>
+        </header>
+        
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+        <div class="body">
+        <p>We also have giant cranes, and historic boats. It is best if the balloons avoid these.</p>
+          
+        </div>
+      </div>
+      <div class="card">
+        <header>
+          <h2>Harbour Cranes</h2>
+        </header>
+        
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+        <div class="body">
+        <p>We also have giant cranes, and historic boats. It is best if the balloons avoid these.</p>
+          
+        </div>
+      </div>
+      <div class="card">
+        <header>
+          <h2>Harbour Cranes</h2>
+        </header>
+        
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+        <div class="body">
+        <p>We also have giant cranes, and historic boats. It is best if the balloons avoid these.</p>
+          
+        </div>
+      </div>
+      <div class="card">
+        <header>
+          <h2>Harbour Cranes</h2>
+        </header>
+        
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/harbour2.jpg" alt="Bristol harbour">
+        <div class="body">
+        <p>We also have giant cranes, and historic boats. It is best if the balloons avoid these.</p>
+          
+        </div>
+      </div>
+    
+    <div class="card">
+      <header>
+        <h2>Striped Balloon</h2>
+      </header>
+      
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/coloured-balloon.jpg" alt="Coloured balloon">
+      <div class="body">
+      <p>I like the nice standard balloons. Stripy. Solid looking basket.</p>
+      </div>
+    </div>
+  </div>
+  </div>

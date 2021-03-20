@@ -6,6 +6,17 @@
     <description>Recent content in Новини on NSP</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Про NSP Компания NSP (NATURE’S SUNSHINE PRODUCTS INC.), США – крупнейшая международная компания по производству экологически чистых фитопродуктов для здоровья, высококачественных витаминов, натуральной косметики, декоративной косметики.
+ Наша история поддерживает и стимулирует кроветворную систему; способствует обновлению тканей и быстрому заживлению ран; участвует в профилактике мочекаменной болезни; поддерживает иммунную систему организма;повышает жизненный тонус.
+ Более 40 лет назад Джин и Кристин Хьюзы (г. Прово, штат Юта, США) проложили новый путь в использовании лечебных трав, посадив семена, которые стали Nature’s Sunshine Products (NSP).</description>
+    </item>
+    
+    <item>
       <title>Computer Diagnostic</title>
       <link>/computer-diagnostics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -24,11 +35,29 @@
     </item>
     
     <item>
+      <title>delivery</title>
+      <link>/delivery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/delivery/</guid>
+      <description>Доставка Доставка БАД-ов НСП (NSP) ЕСПЛАТНО в квартиру или офис по Киеву и Украине  Доставка курьером по Киеву, новой почтой или meest express по Украине при заказе до 1600 грн составляет 30 грн При доставке наложенным платежом обратная доставка составляет (20 грн +2% от суммы перевода). При доставке по Киеву курьером или Украине службой meest express плата за обратную доставку ОТСУСТВУЕТ!!!!! При условии предоплаты так же не нужно оплачивать обратную доставку.</description>
+    </item>
+    
+    <item>
       <title>Privacy Policy</title>
       <link>/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/privacy-policy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>production-certification</title>
+      <link>/production-certification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/production-certification/</guid>
       <description></description>
     </item>
     
@@ -83,6 +112,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/ready-made-solutions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Система бонусів</title>
+      <link>/articles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/</guid>
       <description></description>
     </item>
     

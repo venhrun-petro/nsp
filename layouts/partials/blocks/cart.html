@@ -1,11 +1,11 @@
 <div class="o-tabs">
   <div class="o-tabs__container">
-    <div class="o-tabs__cont">
-      <div class="o-tabs__items">Косметика по догляду</div>
-      <div class="o-tabs__items">БАДи</div>
-      <div class="o-tabs__items">Декоративна косметика</div>
-      <button class="o-tabs__btn-arrow">
-        <span class="o-tabs__icon c-social__icon"
+    <div class="o-tabs__cont" data-tabs-wrapper='0'>
+      <div class="o-tabs__items" data-tabs>Косметика по догляду</div>
+      <div class="o-tabs__items" data-tabs>БАДи</div>
+      <div class="o-tabs__items" data-tabs>Декоративна косметика</div>
+      <button class="o-tabs__btn-arrow" data-tabs-arrow>
+        <span class="o-tabs__icon"
                 style="
                 mask-image: url('{{ "img/svg/arrow-down.svg" | absURL }}');
                 -webkit-mask-image: url('{{ "img/svg/arrow-down.svg" | absURL }}');
@@ -18,7 +18,7 @@
       </button>
     </div>
 
-    <div class="o-tabs__view">
+    <div class="o-tabs__view" data-tabs-view>
       <div class="o-cart"> 
         <div class="o-cart__cont">
             <div class="c-short-cart">
@@ -27,27 +27,26 @@
                 </div>
                 <h2 class="c-short-cart__title">{{ .Params.title }}</h2>
                 <div class="c-short-cart__right">
-                  <p class="c-short-cart__decription">
+                  <div class="c-short-cart__decription">
                     {{ .Params.decription | markdownify }}
-                  </p>
+                  </div>
                   <p class="c-short-cart__have {{- if not .Params.have -}} {{ " c-short-cart__have--not" }}  {{- end -}}">в наявності</p>
                   <p class="c-short-cart__price">{{ .Params.price }}</p>
                   <button class="c-short-cart__btn">Додати в кошик</button>
                 </div>
             </div>
-            <div class="c-cart-content o-cart__content">
+            <div class="c-cart__content o-cart__content">
               {{ .Params.content | markdownify }}
               {{ partial "component/certificates" (dict "Params" .) . }} 
             </div>
         </div> 
       </div>
     </div>
-    <div class="o-tabs__view">
+    <div class="o-tabs__view" data-tabs-view>
       2
     </div>
-    <div class="o-tabs__view">
+    <div class="o-tabs__view" data-tabs-view>
       3
     </div>
   </div>
 </div>
- 

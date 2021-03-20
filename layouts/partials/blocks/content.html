@@ -1,9 +1,12 @@
-{{- with .Params.info -}}
-    <section class="c-content">
-        <div class="c-content__container">
-            <div class="c-content__info">
+ 
+<section class="c-content">
+    <div class="c-content__container">
+        <div class="c-content__info">
+            {{- with .Params.info -}}
                 {{ . | markdownify }}
-            </div> 
-        </div>
-    </section>
-{{- end -}}
+            {{- end -}}
+            {{ .Content }}
+        </div> 
+    </div>
+</section>
+ 

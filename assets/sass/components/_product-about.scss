@@ -1,0 +1,20 @@
+.c-product-about {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 70px;
+  margin: 0;
+
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 300px;
+
+    @include sm {
+      max-width: 100%;
+    }
+  }
+}

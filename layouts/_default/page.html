@@ -3,8 +3,9 @@
   {{ partial "head.html" . }}
   <body>
   {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    {{ $content := .Content }}
     {{- range .Params.sections -}}
-      {{ partial (printf "blocks/%s" .block) (dict "Params" .) }} 
+      {{ partial (printf "blocks/%s" .block) (dict "Params" . "Content" $content) }}
     {{- end -}} 
   {{ partial "footer.html" . }} 
   </body>

@@ -1,5 +1,2 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
-<div class="post_iframe" {{ with .Get `src` }} data-src="{{ . }}"{{ end }}> 
-    <!-- <iframe {{ with .Get `width` }} width="{{ . }}"{{ end }} {{ with .Get `height` }} width="{{ . }}"{{ end }}></iframe>  -->
-    {{ .Inner | markdownify }} 
- </div>
+<iframe class="iframe"  {{ with .Get `src` }} src="{{ . }}"{{ end }} {{ with .Get `width` }} width="{{ . }}"{{ end }} {{ with .Get `height` }} height="{{ . }}"{{ end }}></iframe> 

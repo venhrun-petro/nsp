@@ -1,0 +1,58 @@
+<section class="o-cart-tabel">
+    <div class="o-cart-tabel__row">
+      <div class="o-cart-tabel__container">
+          <div class="o-cart-tabel__cont">
+              <div class="o-cart-tabel__items">
+                <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
+              </div>
+              <div class="o-cart-tabel__items">
+                  <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
+              </div>
+              <div class="o-cart-tabel__items">
+                  <p class="o-cart-tabel__price">699.97 грн</p>
+              </div>
+              <div class="o-cart-tabel__items">
+                {{ partial "component/quantity-field" (dict "class" "o-cart-tabel__quantity" "Params" .) . }}
+              </div>
+              <div class="o-cart-tabel__items">
+                  <button class="o-cart-tabel__remove">
+                      <img class="o-cart-tabel__icon-remove" src="{{ "img/svg/remove.svg" | absURL }}" alt="cart__remove"/>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="o-cart-tabel__row">
+      <div class="o-cart-tabel__container">
+          <div class="o-cart-tabel__cont">
+              <div class="o-cart-tabel__items">
+                <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
+              </div>
+              <div class="o-cart-tabel__items">
+                  <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
+              </div>
+              <div class="o-cart-tabel__items">
+                  <p class="o-cart-tabel__price">699.97 грн</p>
+              </div>
+              <div class="o-cart-tabel__items">
+                {{ partial "component/quantity-field" (dict "class" "o-cart-tabel__quantity" "Params" .) . }}
+              </div>
+              <div class="o-cart-tabel__items">
+                  <button class="o-cart-tabel__remove">
+                      <img class="o-cart-tabel__icon-remove" src="{{ "img/svg/remove.svg" | absURL }}" alt="cart__remove"/>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="o-cart-tabel__info">
+        <div class="o-cart-tabel__container o-cart-tabel__info-cont">
+            <a class="o-cart-tabel__link" href="#">Продовжити покупки</a>
+            <div class="o-cart-tabel__total">
+                {{ partial "component/total" (dict "class" "" "Params" .) . }}
+            </div>
+        </div>
+    </div>
+</section>
+       

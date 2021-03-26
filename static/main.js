@@ -5934,7 +5934,7 @@
       } else {
         factory(jQuery);
       }
-    })(function($6) {
+    })(function($10) {
       "use strict";
       var Slick = window.Slick || {};
       Slick = function() {
@@ -5944,8 +5944,8 @@
           _.defaults = {
             accessibility: true,
             adaptiveHeight: false,
-            appendArrows: $6(element),
-            appendDots: $6(element),
+            appendArrows: $10(element),
+            appendDots: $10(element),
             arrows: true,
             asNavFor: null,
             prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
@@ -5956,7 +5956,7 @@
             centerPadding: "50px",
             cssEase: "ease",
             customPaging: function(slider, i) {
-              return $6('<button type="button" />').text(i + 1);
+              return $10('<button type="button" />').text(i + 1);
             },
             dots: false,
             dotsClass: "slick-dots",
@@ -6022,7 +6022,7 @@
             transformsEnabled: false,
             unslicked: false
           };
-          $6.extend(_, _.initials);
+          $10.extend(_, _.initials);
           _.activeBreakpoint = null;
           _.animType = null;
           _.animProp = null;
@@ -6037,15 +6037,15 @@
           _.respondTo = null;
           _.rowCount = 1;
           _.shouldClick = true;
-          _.$slider = $6(element);
+          _.$slider = $10(element);
           _.$slidesCache = null;
           _.transformType = null;
           _.transitionType = null;
           _.visibilityChange = "visibilitychange";
           _.windowWidth = 0;
           _.windowTimer = null;
-          dataSettings = $6(element).data("slick") || {};
-          _.options = $6.extend({}, _.defaults, settings, dataSettings);
+          dataSettings = $10(element).data("slick") || {};
+          _.options = $10.extend({}, _.defaults, settings, dataSettings);
           _.currentSlide = _.options.initialSlide;
           _.originalSettings = _.options;
           if (typeof document.mozHidden !== "undefined") {
@@ -6055,16 +6055,16 @@
             _.hidden = "webkitHidden";
             _.visibilityChange = "webkitvisibilitychange";
           }
-          _.autoPlay = $6.proxy(_.autoPlay, _);
-          _.autoPlayClear = $6.proxy(_.autoPlayClear, _);
-          _.autoPlayIterator = $6.proxy(_.autoPlayIterator, _);
-          _.changeSlide = $6.proxy(_.changeSlide, _);
-          _.clickHandler = $6.proxy(_.clickHandler, _);
-          _.selectHandler = $6.proxy(_.selectHandler, _);
-          _.setPosition = $6.proxy(_.setPosition, _);
-          _.swipeHandler = $6.proxy(_.swipeHandler, _);
-          _.dragHandler = $6.proxy(_.dragHandler, _);
-          _.keyHandler = $6.proxy(_.keyHandler, _);
+          _.autoPlay = $10.proxy(_.autoPlay, _);
+          _.autoPlayClear = $10.proxy(_.autoPlayClear, _);
+          _.autoPlayIterator = $10.proxy(_.autoPlayIterator, _);
+          _.changeSlide = $10.proxy(_.changeSlide, _);
+          _.clickHandler = $10.proxy(_.clickHandler, _);
+          _.selectHandler = $10.proxy(_.selectHandler, _);
+          _.setPosition = $10.proxy(_.setPosition, _);
+          _.swipeHandler = $10.proxy(_.swipeHandler, _);
+          _.dragHandler = $10.proxy(_.dragHandler, _);
+          _.keyHandler = $10.proxy(_.keyHandler, _);
           _.instanceUid = instanceUid++;
           _.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/;
           _.registerBreakpoints();
@@ -6091,24 +6091,24 @@
         _.unload();
         if (typeof index === "number") {
           if (index === 0 && _.$slides.length === 0) {
-            $6(markup).appendTo(_.$slideTrack);
+            $10(markup).appendTo(_.$slideTrack);
           } else if (addBefore) {
-            $6(markup).insertBefore(_.$slides.eq(index));
+            $10(markup).insertBefore(_.$slides.eq(index));
           } else {
-            $6(markup).insertAfter(_.$slides.eq(index));
+            $10(markup).insertAfter(_.$slides.eq(index));
           }
         } else {
           if (addBefore === true) {
-            $6(markup).prependTo(_.$slideTrack);
+            $10(markup).prependTo(_.$slideTrack);
           } else {
-            $6(markup).appendTo(_.$slideTrack);
+            $10(markup).appendTo(_.$slideTrack);
           }
         }
         _.$slides = _.$slideTrack.children(this.options.slide);
         _.$slideTrack.children(this.options.slide).detach();
         _.$slideTrack.append(_.$slides);
         _.$slides.each(function(index2, element) {
-          $6(element).attr("data-slick-index", index2);
+          $10(element).attr("data-slick-index", index2);
         });
         _.$slidesCache = _.$slides;
         _.reinit();
@@ -6143,7 +6143,7 @@
             if (_.options.rtl === true) {
               _.currentLeft = -_.currentLeft;
             }
-            $6({
+            $10({
               animStart: _.currentLeft
             }).animate({
               animStart: targetLeft
@@ -6187,7 +6187,7 @@
       Slick.prototype.getNavTarget = function() {
         var _ = this, asNavFor = _.options.asNavFor;
         if (asNavFor && asNavFor !== null) {
-          asNavFor = $6(asNavFor).not(_.$slider);
+          asNavFor = $10(asNavFor).not(_.$slider);
         }
         return asNavFor;
       };
@@ -6195,7 +6195,7 @@
         var _ = this, asNavFor = _.getNavTarget();
         if (asNavFor !== null && typeof asNavFor === "object") {
           asNavFor.each(function() {
-            var target = $6(this).slick("getSlick");
+            var target = $10(this).slick("getSlick");
             if (!target.unslicked) {
               target.slideHandler(index, true);
             }
@@ -6247,8 +6247,8 @@
       Slick.prototype.buildArrows = function() {
         var _ = this;
         if (_.options.arrows === true) {
-          _.$prevArrow = $6(_.options.prevArrow).addClass("slick-arrow");
-          _.$nextArrow = $6(_.options.nextArrow).addClass("slick-arrow");
+          _.$prevArrow = $10(_.options.prevArrow).addClass("slick-arrow");
+          _.$nextArrow = $10(_.options.nextArrow).addClass("slick-arrow");
           if (_.slideCount > _.options.slidesToShow) {
             _.$prevArrow.removeClass("slick-hidden").removeAttr("aria-hidden tabindex");
             _.$nextArrow.removeClass("slick-hidden").removeAttr("aria-hidden tabindex");
@@ -6273,9 +6273,9 @@
         var _ = this, i, dot;
         if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
           _.$slider.addClass("slick-dotted");
-          dot = $6("<ul />").addClass(_.options.dotsClass);
+          dot = $10("<ul />").addClass(_.options.dotsClass);
           for (i = 0; i <= _.getDotCount(); i += 1) {
-            dot.append($6("<li />").append(_.options.customPaging.call(this, _, i)));
+            dot.append($10("<li />").append(_.options.customPaging.call(this, _, i)));
           }
           _.$dots = dot.appendTo(_.options.appendDots);
           _.$dots.find("li").first().addClass("slick-active");
@@ -6286,16 +6286,16 @@
         _.$slides = _.$slider.children(_.options.slide + ":not(.slick-cloned)").addClass("slick-slide");
         _.slideCount = _.$slides.length;
         _.$slides.each(function(index, element) {
-          $6(element).attr("data-slick-index", index).data("originalStyling", $6(element).attr("style") || "");
+          $10(element).attr("data-slick-index", index).data("originalStyling", $10(element).attr("style") || "");
         });
         _.$slider.addClass("slick-slider");
-        _.$slideTrack = _.slideCount === 0 ? $6('<div class="slick-track"/>').appendTo(_.$slider) : _.$slides.wrapAll('<div class="slick-track"/>').parent();
+        _.$slideTrack = _.slideCount === 0 ? $10('<div class="slick-track"/>').appendTo(_.$slider) : _.$slides.wrapAll('<div class="slick-track"/>').parent();
         _.$list = _.$slideTrack.wrap('<div class="slick-list"/>').parent();
         _.$slideTrack.css("opacity", 0);
         if (_.options.centerMode === true || _.options.swipeToSlide === true) {
           _.options.slidesToScroll = 1;
         }
-        $6("img[data-lazy]", _.$slider).not("[src]").addClass("slick-loading");
+        $10("img[data-lazy]", _.$slider).not("[src]").addClass("slick-loading");
         _.setupInfinite();
         _.buildArrows();
         _.buildDots();
@@ -6336,7 +6336,7 @@
       Slick.prototype.checkResponsive = function(initial, forceUpdate) {
         var _ = this, breakpoint, targetBreakpoint, respondToWidth, triggerBreakpoint = false;
         var sliderWidth = _.$slider.width();
-        var windowWidth = window.innerWidth || $6(window).width();
+        var windowWidth = window.innerWidth || $10(window).width();
         if (_.respondTo === "window") {
           respondToWidth = windowWidth;
         } else if (_.respondTo === "slider") {
@@ -6366,7 +6366,7 @@
                 if (_.breakpointSettings[targetBreakpoint] === "unslick") {
                   _.unslick(targetBreakpoint);
                 } else {
-                  _.options = $6.extend({}, _.originalSettings, _.breakpointSettings[targetBreakpoint]);
+                  _.options = $10.extend({}, _.originalSettings, _.breakpointSettings[targetBreakpoint]);
                   if (initial === true) {
                     _.currentSlide = _.options.initialSlide;
                   }
@@ -6379,7 +6379,7 @@
               if (_.breakpointSettings[targetBreakpoint] === "unslick") {
                 _.unslick(targetBreakpoint);
               } else {
-                _.options = $6.extend({}, _.originalSettings, _.breakpointSettings[targetBreakpoint]);
+                _.options = $10.extend({}, _.originalSettings, _.breakpointSettings[targetBreakpoint]);
                 if (initial === true) {
                   _.currentSlide = _.options.initialSlide;
                 }
@@ -6404,7 +6404,7 @@
         }
       };
       Slick.prototype.changeSlide = function(event, dontAnimate) {
-        var _ = this, $target = $6(event.currentTarget), indexOffset, slideOffset, unevenOffset;
+        var _ = this, $target = $10(event.currentTarget), indexOffset, slideOffset, unevenOffset;
         if ($target.is("a")) {
           event.preventDefault();
         }
@@ -6455,7 +6455,7 @@
       Slick.prototype.cleanUpEvents = function() {
         var _ = this;
         if (_.options.dots && _.$dots !== null) {
-          $6("li", _.$dots).off("click.slick", _.changeSlide).off("mouseenter.slick", $6.proxy(_.interrupt, _, true)).off("mouseleave.slick", $6.proxy(_.interrupt, _, false));
+          $10("li", _.$dots).off("click.slick", _.changeSlide).off("mouseenter.slick", $10.proxy(_.interrupt, _, true)).off("mouseleave.slick", $10.proxy(_.interrupt, _, false));
           if (_.options.accessibility === true) {
             _.$dots.off("keydown.slick", _.keyHandler);
           }
@@ -6474,23 +6474,23 @@
         _.$list.off("touchend.slick mouseup.slick", _.swipeHandler);
         _.$list.off("touchcancel.slick mouseleave.slick", _.swipeHandler);
         _.$list.off("click.slick", _.clickHandler);
-        $6(document).off(_.visibilityChange, _.visibility);
+        $10(document).off(_.visibilityChange, _.visibility);
         _.cleanUpSlideEvents();
         if (_.options.accessibility === true) {
           _.$list.off("keydown.slick", _.keyHandler);
         }
         if (_.options.focusOnSelect === true) {
-          $6(_.$slideTrack).children().off("click.slick", _.selectHandler);
+          $10(_.$slideTrack).children().off("click.slick", _.selectHandler);
         }
-        $6(window).off("orientationchange.slick.slick-" + _.instanceUid, _.orientationChange);
-        $6(window).off("resize.slick.slick-" + _.instanceUid, _.resize);
-        $6("[draggable!=true]", _.$slideTrack).off("dragstart", _.preventDefault);
-        $6(window).off("load.slick.slick-" + _.instanceUid, _.setPosition);
+        $10(window).off("orientationchange.slick.slick-" + _.instanceUid, _.orientationChange);
+        $10(window).off("resize.slick.slick-" + _.instanceUid, _.resize);
+        $10("[draggable!=true]", _.$slideTrack).off("dragstart", _.preventDefault);
+        $10(window).off("load.slick.slick-" + _.instanceUid, _.setPosition);
       };
       Slick.prototype.cleanUpSlideEvents = function() {
         var _ = this;
-        _.$list.off("mouseenter.slick", $6.proxy(_.interrupt, _, true));
-        _.$list.off("mouseleave.slick", $6.proxy(_.interrupt, _, false));
+        _.$list.off("mouseenter.slick", $10.proxy(_.interrupt, _, true));
+        _.$list.off("mouseleave.slick", $10.proxy(_.interrupt, _, false));
       };
       Slick.prototype.cleanUpRows = function() {
         var _ = this, originalSlides;
@@ -6513,7 +6513,7 @@
         _.autoPlayClear();
         _.touchObject = {};
         _.cleanUpEvents();
-        $6(".slick-cloned", _.$slider).detach();
+        $10(".slick-cloned", _.$slider).detach();
         if (_.$dots) {
           _.$dots.remove();
         }
@@ -6531,7 +6531,7 @@
         }
         if (_.$slides) {
           _.$slides.removeClass("slick-slide slick-active slick-center slick-visible slick-current").removeAttr("aria-hidden").removeAttr("data-slick-index").each(function() {
-            $6(this).attr("style", $6(this).data("originalStyling"));
+            $10(this).attr("style", $10(this).data("originalStyling"));
           });
           _.$slideTrack.children(this.options.slide).detach();
           _.$slideTrack.detach();
@@ -6608,7 +6608,7 @@
         var _ = this;
         _.$slider.off("focus.slick blur.slick").on("focus.slick blur.slick", "*", function(event) {
           event.stopImmediatePropagation();
-          var $sf = $6(this);
+          var $sf = $10(this);
           setTimeout(function() {
             if (_.options.pauseOnFocus) {
               _.focussed = $sf.is(":focus");
@@ -6763,12 +6763,12 @@
         centerOffset = _.options.centerMode === true ? _.slideWidth * Math.floor(_.options.slidesToShow / 2) : 0;
         if (_.options.swipeToSlide === true) {
           _.$slideTrack.find(".slick-slide").each(function(index, slide) {
-            if (slide.offsetLeft - centerOffset + $6(slide).outerWidth() / 2 > _.swipeLeft * -1) {
+            if (slide.offsetLeft - centerOffset + $10(slide).outerWidth() / 2 > _.swipeLeft * -1) {
               swipedSlide = slide;
               return false;
             }
           });
-          slidesTraversed = Math.abs($6(swipedSlide).attr("data-slick-index") - _.currentSlide) || 1;
+          slidesTraversed = Math.abs($10(swipedSlide).attr("data-slick-index") - _.currentSlide) || 1;
           return slidesTraversed;
         } else {
           return _.options.slidesToScroll;
@@ -6785,8 +6785,8 @@
       };
       Slick.prototype.init = function(creation) {
         var _ = this;
-        if (!$6(_.$slider).hasClass("slick-initialized")) {
-          $6(_.$slider).addClass("slick-initialized");
+        if (!$10(_.$slider).hasClass("slick-initialized")) {
+          $10(_.$slider).addClass("slick-initialized");
           _.buildRows();
           _.buildOut();
           _.setProps();
@@ -6822,15 +6822,15 @@
         if (_.$dots !== null) {
           _.$slides.not(_.$slideTrack.find(".slick-cloned")).each(function(i2) {
             var slideControlIndex = tabControlIndexes.indexOf(i2);
-            $6(this).attr({
+            $10(this).attr({
               role: "tabpanel",
               id: "slick-slide" + _.instanceUid + i2,
               tabindex: -1
             });
             if (slideControlIndex !== -1) {
               var ariaButtonControl = "slick-slide-control" + _.instanceUid + slideControlIndex;
-              if ($6("#" + ariaButtonControl).length) {
-                $6(this).attr({
+              if ($10("#" + ariaButtonControl).length) {
+                $10(this).attr({
                   "aria-describedby": ariaButtonControl
                 });
               }
@@ -6838,10 +6838,10 @@
           });
           _.$dots.attr("role", "tablist").find("li").each(function(i2) {
             var mappedSlideIndex = tabControlIndexes[i2];
-            $6(this).attr({
+            $10(this).attr({
               role: "presentation"
             });
-            $6(this).find("button").first().attr({
+            $10(this).find("button").first().attr({
               role: "tab",
               id: "slick-slide-control" + _.instanceUid + i2,
               "aria-controls": "slick-slide" + _.instanceUid + mappedSlideIndex,
@@ -6881,7 +6881,7 @@
       Slick.prototype.initDotEvents = function() {
         var _ = this;
         if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
-          $6("li", _.$dots).on("click.slick", {
+          $10("li", _.$dots).on("click.slick", {
             message: "index"
           }, _.changeSlide);
           if (_.options.accessibility === true) {
@@ -6889,14 +6889,14 @@
           }
         }
         if (_.options.dots === true && _.options.pauseOnDotsHover === true && _.slideCount > _.options.slidesToShow) {
-          $6("li", _.$dots).on("mouseenter.slick", $6.proxy(_.interrupt, _, true)).on("mouseleave.slick", $6.proxy(_.interrupt, _, false));
+          $10("li", _.$dots).on("mouseenter.slick", $10.proxy(_.interrupt, _, true)).on("mouseleave.slick", $10.proxy(_.interrupt, _, false));
         }
       };
       Slick.prototype.initSlideEvents = function() {
         var _ = this;
         if (_.options.pauseOnHover) {
-          _.$list.on("mouseenter.slick", $6.proxy(_.interrupt, _, true));
-          _.$list.on("mouseleave.slick", $6.proxy(_.interrupt, _, false));
+          _.$list.on("mouseenter.slick", $10.proxy(_.interrupt, _, true));
+          _.$list.on("mouseleave.slick", $10.proxy(_.interrupt, _, false));
         }
       };
       Slick.prototype.initializeEvents = function() {
@@ -6917,18 +6917,18 @@
           action: "end"
         }, _.swipeHandler);
         _.$list.on("click.slick", _.clickHandler);
-        $6(document).on(_.visibilityChange, $6.proxy(_.visibility, _));
+        $10(document).on(_.visibilityChange, $10.proxy(_.visibility, _));
         if (_.options.accessibility === true) {
           _.$list.on("keydown.slick", _.keyHandler);
         }
         if (_.options.focusOnSelect === true) {
-          $6(_.$slideTrack).children().on("click.slick", _.selectHandler);
+          $10(_.$slideTrack).children().on("click.slick", _.selectHandler);
         }
-        $6(window).on("orientationchange.slick.slick-" + _.instanceUid, $6.proxy(_.orientationChange, _));
-        $6(window).on("resize.slick.slick-" + _.instanceUid, $6.proxy(_.resize, _));
-        $6("[draggable!=true]", _.$slideTrack).on("dragstart", _.preventDefault);
-        $6(window).on("load.slick.slick-" + _.instanceUid, _.setPosition);
-        $6(_.setPosition);
+        $10(window).on("orientationchange.slick.slick-" + _.instanceUid, $10.proxy(_.orientationChange, _));
+        $10(window).on("resize.slick.slick-" + _.instanceUid, $10.proxy(_.resize, _));
+        $10("[draggable!=true]", _.$slideTrack).on("dragstart", _.preventDefault);
+        $10(window).on("load.slick.slick-" + _.instanceUid, _.setPosition);
+        $10(_.setPosition);
       };
       Slick.prototype.initUI = function() {
         var _ = this;
@@ -6961,8 +6961,8 @@
       Slick.prototype.lazyLoad = function() {
         var _ = this, loadRange, cloneRange, rangeStart, rangeEnd;
         function loadImages(imagesScope) {
-          $6("img[data-lazy]", imagesScope).each(function() {
-            var image = $6(this), imageSource = $6(this).attr("data-lazy"), imageSrcSet = $6(this).attr("data-srcset"), imageSizes = $6(this).attr("data-sizes") || _.$slider.attr("data-sizes"), imageToLoad = document.createElement("img");
+          $10("img[data-lazy]", imagesScope).each(function() {
+            var image = $10(this), imageSource = $10(this).attr("data-lazy"), imageSrcSet = $10(this).attr("data-srcset"), imageSizes = $10(this).attr("data-sizes") || _.$slider.attr("data-sizes"), imageToLoad = document.createElement("img");
             imageToLoad.onload = function() {
               image.animate({opacity: 0}, 100, function() {
                 if (imageSrcSet) {
@@ -7079,7 +7079,7 @@
           if (_.options.accessibility === true) {
             _.initADA();
             if (_.options.focusOnChange) {
-              var $currentSlide = $6(_.$slides.get(_.currentSlide));
+              var $currentSlide = $10(_.$slides.get(_.currentSlide));
               $currentSlide.attr("tabindex", 0).focus();
             }
           }
@@ -7098,7 +7098,7 @@
       };
       Slick.prototype.progressiveLazyLoad = function(tryCount) {
         tryCount = tryCount || 1;
-        var _ = this, $imgsToLoad = $6("img[data-lazy]", _.$slider), image, imageSource, imageSrcSet, imageSizes, imageToLoad;
+        var _ = this, $imgsToLoad = $10("img[data-lazy]", _.$slider), image, imageSource, imageSrcSet, imageSizes, imageToLoad;
         if ($imgsToLoad.length) {
           image = $imgsToLoad.first();
           imageSource = image.attr("data-lazy");
@@ -7146,7 +7146,7 @@
         }
         currentSlide = _.currentSlide;
         _.destroy(true);
-        $6.extend(_, _.initials, {currentSlide});
+        $10.extend(_, _.initials, {currentSlide});
         _.init();
         if (!initializing) {
           _.changeSlide({
@@ -7159,7 +7159,7 @@
       };
       Slick.prototype.registerBreakpoints = function() {
         var _ = this, breakpoint, currentBreakpoint, l, responsiveSettings = _.options.responsive || null;
-        if ($6.type(responsiveSettings) === "array" && responsiveSettings.length) {
+        if ($10.type(responsiveSettings) === "array" && responsiveSettings.length) {
           _.respondTo = _.options.respondTo || "window";
           for (breakpoint in responsiveSettings) {
             l = _.breakpoints.length - 1;
@@ -7203,7 +7203,7 @@
         _.initSlideEvents();
         _.checkResponsive(false, true);
         if (_.options.focusOnSelect === true) {
-          $6(_.$slideTrack).children().on("click.slick", _.selectHandler);
+          $10(_.$slideTrack).children().on("click.slick", _.selectHandler);
         }
         _.setSlideClasses(typeof _.currentSlide === "number" ? _.currentSlide : 0);
         _.setPosition();
@@ -7214,10 +7214,10 @@
       };
       Slick.prototype.resize = function() {
         var _ = this;
-        if ($6(window).width() !== _.windowWidth) {
+        if ($10(window).width() !== _.windowWidth) {
           clearTimeout(_.windowDelay);
           _.windowDelay = window.setTimeout(function() {
-            _.windowWidth = $6(window).width();
+            _.windowWidth = $10(window).width();
             _.checkResponsive();
             if (!_.unslicked) {
               _.setPosition();
@@ -7305,7 +7305,7 @@
         _.$slides.each(function(index, element) {
           targetLeft = _.slideWidth * index * -1;
           if (_.options.rtl === true) {
-            $6(element).css({
+            $10(element).css({
               position: "relative",
               right: targetLeft,
               top: 0,
@@ -7313,7 +7313,7 @@
               opacity: 0
             });
           } else {
-            $6(element).css({
+            $10(element).css({
               position: "relative",
               left: targetLeft,
               top: 0,
@@ -7336,15 +7336,15 @@
       };
       Slick.prototype.setOption = Slick.prototype.slickSetOption = function() {
         var _ = this, l, item, option, value, refresh = false, type;
-        if ($6.type(arguments[0]) === "object") {
+        if ($10.type(arguments[0]) === "object") {
           option = arguments[0];
           refresh = arguments[1];
           type = "multiple";
-        } else if ($6.type(arguments[0]) === "string") {
+        } else if ($10.type(arguments[0]) === "string") {
           option = arguments[0];
           value = arguments[1];
           refresh = arguments[2];
-          if (arguments[0] === "responsive" && $6.type(arguments[1]) === "array") {
+          if (arguments[0] === "responsive" && $10.type(arguments[1]) === "array") {
             type = "responsive";
           } else if (typeof arguments[1] !== "undefined") {
             type = "single";
@@ -7353,12 +7353,12 @@
         if (type === "single") {
           _.options[option] = value;
         } else if (type === "multiple") {
-          $6.each(option, function(opt, val) {
+          $10.each(option, function(opt, val) {
             _.options[opt] = val;
           });
         } else if (type === "responsive") {
           for (item in value) {
-            if ($6.type(_.options.responsive) !== "array") {
+            if ($10.type(_.options.responsive) !== "array") {
               _.options.responsive = [value[item]];
             } else {
               l = _.options.responsive.length - 1;
@@ -7500,14 +7500,14 @@
             }
             for (i = _.slideCount; i > _.slideCount - infiniteCount; i -= 1) {
               slideIndex = i - 1;
-              $6(_.$slides[slideIndex]).clone(true).attr("id", "").attr("data-slick-index", slideIndex - _.slideCount).prependTo(_.$slideTrack).addClass("slick-cloned");
+              $10(_.$slides[slideIndex]).clone(true).attr("id", "").attr("data-slick-index", slideIndex - _.slideCount).prependTo(_.$slideTrack).addClass("slick-cloned");
             }
             for (i = 0; i < infiniteCount + _.slideCount; i += 1) {
               slideIndex = i;
-              $6(_.$slides[slideIndex]).clone(true).attr("id", "").attr("data-slick-index", slideIndex + _.slideCount).appendTo(_.$slideTrack).addClass("slick-cloned");
+              $10(_.$slides[slideIndex]).clone(true).attr("id", "").attr("data-slick-index", slideIndex + _.slideCount).appendTo(_.$slideTrack).addClass("slick-cloned");
             }
             _.$slideTrack.find(".slick-cloned").find("[id]").each(function() {
-              $6(this).attr("id", "");
+              $10(this).attr("id", "");
             });
           }
         }
@@ -7521,7 +7521,7 @@
       };
       Slick.prototype.selectHandler = function(event) {
         var _ = this;
-        var targetElement = $6(event.target).is(".slick-slide") ? $6(event.target) : $6(event.target).parents(".slick-slide");
+        var targetElement = $10(event.target).is(".slick-slide") ? $10(event.target) : $10(event.target).parents(".slick-slide");
         var index = parseInt(targetElement.attr("data-slick-index"));
         if (!index)
           index = 0;
@@ -7806,7 +7806,7 @@
       };
       Slick.prototype.unload = function() {
         var _ = this;
-        $6(".slick-cloned", _.$slider).remove();
+        $10(".slick-cloned", _.$slider).remove();
         if (_.$dots) {
           _.$dots.remove();
         }
@@ -7858,7 +7858,7 @@
           }
         }
       };
-      $6.fn.slick = function() {
+      $10.fn.slick = function() {
         var _ = this, opt = arguments[0], args = Array.prototype.slice.call(arguments, 1), l = _.length, i, ret;
         for (i = 0; i < l; i++) {
           if (typeof opt == "object" || typeof opt == "undefined")
@@ -7874,7 +7874,7 @@
   });
 
   // <stdin>
-  var import_jquery5 = __toModule(require_jquery());
+  var import_jquery9 = __toModule(require_jquery());
   var import_slick_carousel = __toModule(require_slick());
 
   // ns-hugo:D:\Hugo\nsp\assets\js\main-modules\buttonToggle.js
@@ -7897,8 +7897,8 @@
   var import_jquery2 = __toModule(require_jquery());
   var NavItemsVisible = class {
     constructor() {
-      const dataNavArrow = "[data-nav-arrow]";
-      const dataNavLink = "[data-nav-link]";
+      this.dataNavArrow = "[data-nav-arrow]";
+      this.dataNavLink = "[data-nav-link]";
       this.eventListeners();
     }
     eventListeners() {
@@ -7947,6 +7947,154 @@
     }
   };
 
+  // ns-hugo:D:\Hugo\nsp\assets\js\main-modules\tabs.js
+  var import_jquery5 = __toModule(require_jquery());
+  var Tabs = class {
+    constructor() {
+      this.tabsWrapper = "data-tabs-wrapper";
+      this.tabsItem = "[data-tabs]";
+      this.tabsArrow = "[data-tabs-arrow]";
+      this.tabsView = "[data-tabs-view]";
+      this.activeCount = document.querySelector("[" + this.tabsWrapper + "]") ? document.querySelector("[" + this.tabsWrapper + "]").getAttribute(this.tabsWrapper) : 0;
+      this.eventListeners();
+    }
+    eventListeners() {
+      const tabs = document.querySelectorAll(this.tabsItem);
+      const tabsContent = document.querySelectorAll(this.tabsView);
+      const tabsArrow = document.querySelector(this.tabsArrow);
+      if (!tabs[0] && !tabsContent[0] && !tabsArrow) {
+        return;
+      }
+      this.init(tabs, tabsContent);
+      tabs.forEach((el, index) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          this.hideTabs(tabs, tabsContent);
+          this.activeCount = index;
+          this.init(tabs, tabsContent);
+          this.toggle(e.target.closest("[" + this.tabsWrapper + "]"));
+        });
+      });
+      tabsArrow.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.toggle(tabsArrow.closest("[" + this.tabsWrapper + "]"));
+      });
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("[" + this.tabsWrapper + "]")) {
+          document.querySelector("[" + this.tabsWrapper + "]").classList.remove("is-active");
+        }
+      });
+    }
+    init(tabsItems, contentView) {
+      tabsItems[this.activeCount].classList.add("is-active");
+      contentView[this.activeCount].classList.add("is-active");
+    }
+    hideTabs(tabsItems, contentView) {
+      tabsItems[this.activeCount].classList.remove("is-active");
+      contentView[this.activeCount].classList.remove("is-active");
+    }
+    toggle(tabsWrapper) {
+      tabsWrapper.classList.toggle("is-active");
+    }
+  };
+
+  // ns-hugo:D:\Hugo\nsp\assets\js\main-modules\resizeGridItems.js
+  var import_jquery6 = __toModule(require_jquery());
+  var ResizeGridItems = class {
+    constructor() {
+      this.grid = "[data-grid]";
+      this.gridItem = "[data-grid-item]";
+      this.gridContent = "[data-grid-content]";
+      this.eventListeners();
+    }
+    eventListeners() {
+      if (import_jquery6.default(window).width() < 768) {
+        return;
+      }
+      window.onload = this.resizeAllGridItems();
+      window.addEventListener("resize", this.resizeAllGridItems);
+    }
+    resizeGridItem(item) {
+      let grid = document.querySelectorAll(this.grid)[0];
+      let rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-auto-rows"));
+      let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-row-gap"));
+      let rowSpan = Math.ceil((item.querySelector(this.gridContent).getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
+      item.style.gridRowEnd = "span " + rowSpan;
+    }
+    resizeAllGridItems() {
+      let allItems = document.querySelectorAll(this.gridItem);
+      for (let x = 0; x < allItems.length; x++) {
+        this.resizeGridItem(allItems[x]);
+      }
+    }
+  };
+
+  // ns-hugo:D:\Hugo\nsp\assets\js\main-modules\quantity.js
+  var import_jquery7 = __toModule(require_jquery());
+  var Quantity = class {
+    constructor() {
+      this.dataQuantitySelect = "[data-quantity-field-select]";
+      this.dataQuantitySelectWrap = "[data-quantity-field-select-wrap]";
+      this.dataQuantityOptions = "[data-quantity-field-options]";
+      this.dataQuantityBtn = "[data-quantity-field-btn]";
+      this.dataQuantityInput = "[data-quantity-field-input]";
+      this.dataQuantityField = "[data-quantity-field]";
+      this.eventListeners();
+    }
+    eventListeners() {
+      import_jquery7.default(document).on("click", this.dataQuantityBtn, (e) => {
+        this.change(e.currentTarget);
+      });
+      import_jquery7.default(document).on("change", this.dataQuantityInput, (e) => {
+        this.calculateMinmax(e.currentTarget);
+      });
+    }
+    change(buttonElement) {
+      const input = buttonElement.closest(this.dataQuantityField).querySelector(this.dataQuantityInput);
+      if (!input) {
+        return null;
+      }
+      const direction = buttonElement.getAttribute("data-quantity-field-btn");
+      const value = direction === "decrement" ? Number(input.value) - 1 : Number(input.value) + 1;
+      import_jquery7.default(input).val(value);
+      import_jquery7.default(input).trigger("change");
+    }
+    calculateMinmax(inputElement) {
+      const minValue = inputElement.getAttribute("min") || 1;
+      const maxValue = inputElement.getAttribute("max") || Infinity;
+      const decrementBtn = inputElement.closest(this.dataQuantityField).querySelector('[data-quantity-field-btn="decrement"]');
+      const incrementBtn = inputElement.closest(this.dataQuantityField).querySelector('[data-quantity-field-btn="increment"]');
+      decrementBtn.removeAttribute("disabled");
+      incrementBtn.removeAttribute("disabled");
+      if (Number(inputElement.value) <= minValue) {
+        inputElement.setAttribute("value", minValue);
+        decrementBtn.setAttribute("disabled", "");
+      }
+      if (Number(inputElement.value) >= maxValue) {
+        console.log("1");
+        inputElement.setAttribute("value", maxValue);
+        incrementBtn.setAttribute("disabled", "");
+      }
+    }
+  };
+
+  // ns-hugo:D:\Hugo\nsp\assets\js\main-modules\dropdawnToggle.js
+  var import_jquery8 = __toModule(require_jquery());
+  var DropdawnToggle = class {
+    constructor(addClass) {
+      this.dropdawn = "[data-dropdawn]";
+      this.show = "[data-show]";
+      this.class = addClass ? addClass : "is-active";
+      this.eventListeners();
+    }
+    eventListeners() {
+      import_jquery8.default(document).on("click", `${this.dropdawn}`, (e) => {
+        e.target.classList.toggle(this.class);
+        e.target.nextElementSibling.classList.toggle(this.class);
+      });
+    }
+  };
+
   // <stdin>
   new ButtonToggle("[data-search-btn]", "[data-search]");
   new ButtonToggle("[hamburger]", "[data-nav-wrapper]");
@@ -7960,4 +8108,8 @@
   new NavItemsVisible();
   new MobileSlider();
   new GlobalSlider();
+  new Tabs();
+  new ResizeGridItems();
+  new Quantity();
+  new DropdawnToggle();
 })();

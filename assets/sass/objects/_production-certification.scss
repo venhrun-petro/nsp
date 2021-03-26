@@ -2,7 +2,7 @@
   padding: 46px 0 90px;
 
   @include sm {
-    padding: 50px 0 80px;
+    padding: 45px 0 100px;
   }
 
   &__container {
@@ -10,61 +10,64 @@
   } 
   
   &__list {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-columns: repeat(auto-fit, 200px);
-    // grid-template-rows: repeat(auto-fit, 200px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px,1fr));
+    grid-auto-rows: 20px;
     grid-gap: 30px;
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: max-content;
+      grid-gap: 15px;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    // max-width: 50%;
     height: 100%;
   }
-}
 
-img {
-  max-width: 100%;
-}
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 15px;
+  }
 
-.cards {
-  margin: 0 auto;
-  max-width: 800px;
-}
-.card {
-  float: left;
-   width: 200px;
-   margin: 0 10px;
- }
-.card {
-  background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-}
+  &__title {
+    @extend .h1;
 
-.card header {
-  padding: 10px;
-  background-color: rgb(41,73,130);
-  color: #fff;
-}
+    text-align: center;
+    margin: 0 auto 0;
+  }
 
-.card header h2 {
-  font-size: 1.4rem;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
+  &__sub-title {
+    @extend .h3;
 
-.card .body {
-  padding: 10px;
-  font-size: .9rem;
-  color: #757575;
-}
+    text-align: center;
+    margin: 60px auto 30px;
 
-.t {
-  display: flex;
+    @include sm {
+      margin: 30px auto 15px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__mane {
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+    color: $color-black-2;
+    margin: 0 0 30px;
+
+    @include sm {
+      margin: 0 0 15px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
 }

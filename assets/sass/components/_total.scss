@@ -1,0 +1,67 @@
+.c-total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+
+  @include sm {
+  }
+
+  &__price {
+    margin: 0 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    color: #191C12;
+
+    strong {
+      font-weight: bold;
+      font-size: 43px;
+      line-height: 50px;
+    }
+  }
+
+  &__warning {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 40px;
+  }
+
+  &__icon-remove {
+    width: 50px;
+    height: 50%;
+    object-fit: contain;
+    margin: 0 15px 0 0;
+  }
+
+  &__warning-text {
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #191C12;
+    margin: 0;
+  }
+    
+  &__btn {
+    @include btn-clear();
+
+    background: #457759;
+    border-radius: 30px;
+    padding: 13px 15px;
+    text-align: center;
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}

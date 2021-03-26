@@ -1,0 +1,167 @@
+.o-cart-tabel {
+  display: flex;
+  flex-direction: column;
+  
+  @include sm {
+    // padding: 45px 20px 170px;
+  }
+
+  &__container {
+    @extend .container;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    background: #F5FFD8;
+    padding: 20px 0;
+
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__items {
+    .c-quantity-field {
+      &__button,
+      &__input {
+        width: 64px;
+        height: 74px;
+      }
+    }
+  }
+
+  &__cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 110px;
+    object-fit: contain;
+  }
+
+  &__name {
+    max-width: 360px;
+    width: 100%;
+    text-align: left;
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+    color: #1275B0;
+    margin: 0;
+  }
+
+  &__count {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    color: #191C12;
+    margin: 0;
+  }
+
+  &__price {
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+    color: #943E01;
+    margin: 0;
+  }
+
+  &__remove {
+    @include btn-clear();
+
+    cursor: pointer;
+  }
+
+  &__icon-remove {
+    width: 42px;
+    height: 52px;
+    object-fit: contain;
+  }
+
+  &__info {
+    margin: 25px 0 80px;
+  }
+
+  &__info-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__total {
+    max-width: 470px;
+  }
+
+  &__link {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #191C12;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 55px 0 70px;
+  }
+
+  &__title {
+    font-family: $font-amsterdam;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 52px;
+    text-transform: uppercase;
+    color: #1275B0;
+    margin: 0;
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+    text-decoration-line: underline;
+    color: #191C12;
+    margin: 0;
+  }
+
+  &__back-icon {
+    margin-right: 15px;
+    object-fit: contain;
+  }
+
+  &__sub-title {
+    font-family: $font-amsterdam;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #191C12;
+    margin: 0 0 65px;
+  }
+
+  &__descriptions {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 41px;
+    color: #1275B0;
+    margin: 0 0 35px;
+  }
+}

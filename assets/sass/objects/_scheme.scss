@@ -1,0 +1,258 @@
+.o-scheme {
+  display: flex;
+  padding: 60px 0 200px;
+
+  @include sm {
+    padding: 60px 0 90px;
+  }
+
+  &__container {
+    @extend .container;
+
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  &__cont {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #457759;
+    overflow: hidden;
+  }
+
+  &__row {
+    display: table-row;
+    background-color: #F5FFD8;
+
+    &:not(:last-child) {
+      @include min-sm {
+        border-bottom: 1px solid #457759;
+      }
+    }
+
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      margin: 0 auto;
+      max-width: 420px;
+      padding: 45px 0 10px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+        border-radius: 35px;
+      }
+    }
+  }
+
+  &__header {
+    display: table-row;
+    background-color: #457759;
+
+    @include sm {
+      display: none;
+    }
+
+    .o-scheme__item {
+      padding: 10px;
+      border-right: 1px solid #fff;
+    }
+    & > .o-scheme__item {
+      padding: 10px;
+
+      &:not(:last-child) {
+        border-color: #fff;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+
+  &__item {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+
+    @include md {
+      padding: 15px;
+    }
+
+    @include sm {
+      padding: 0 10px;
+    }
+
+    &:not(:last-child) {
+      @include min-sm {
+        border-right: 1px solid #457759;
+      }
+    }
+  }
+
+  &__actions {
+    width: 200px;
+
+    @include md {
+      width: 155px;
+    }
+
+    @include sm {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__reception {
+    width: 230px;
+    padding: 30px 37px;
+
+    @include md {
+      width: 160px;
+      padding: 15px;
+    }
+
+    @include sm {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
+
+  &__dropdawn {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px 15px 30px;
+    background: #97B66C;
+    border-radius: 25px;
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 0 0 5px;
+
+    @include min-sm {
+      display: none;
+    }
+
+    img {
+      transition: 0.3s all;
+    }
+
+    &.is-active > img {
+      transform: rotate(180deg)
+    }
+  }
+
+  &__btn {
+    @include btn-clear();
+
+    background: #457759;
+    border-radius: 25px;
+    padding: 15px;
+    min-width: 135px;
+    text-align: center;
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+    @include min-sm {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #191C12;
+    margin: 0;
+
+    @include sm {
+      display: none;
+      padding: 15px 20px 15px 30px;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: #457759;
+      text-align: left;
+      
+      &.is-active {
+        display: block;
+      }
+    }
+  }
+
+  &__bad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include sm {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__name {
+    font-family: $font-roboto;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #1275B0;
+    margin: 0 10px 0 0;
+
+    @include md {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  
+    @include sm {
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      max-width: 185px;
+      margin: 0 auto 45px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 62px;
+    height: auto;
+    object-fit: contain;
+
+    @include sm {
+      width: 135px;
+      height: auto;
+      margin: 0 auto 15px;
+    }
+  }
+
+  &__goal {
+    p {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-family: $font-roboto;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    text-align: center !important;
+    margin: 0;
+
+    @include md {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}

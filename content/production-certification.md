@@ -13,6 +13,12 @@ sections:
               img: img/certificates3.jpg
             - name: Сертифікат NSF
               img: img/certificates.jpg
+            - name: Сертифікат NSF
+              img: img/certificates2.jpg
+            - name: Сертифікат NSF
+              img: img/certificates3.jpg
+            - name: Сертифікат NSF
+              img: img/certificates.jpg
       
 
   

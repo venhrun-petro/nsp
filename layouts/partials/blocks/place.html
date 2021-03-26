@@ -1,0 +1,118 @@
+<section class="o-cart-tabel">
+    <div class="o-cart-tabel__container">
+        <div class="o-cart-tabel__header">
+            <div class="o-cart-tabel__header-row">
+                <h1 class="o-cart-tabel__title">Оформлення замовлення</h1>
+                <a class="o-cart-tabel__back" href="">
+                    <img class="o-cart-tabel__back-icon" src="{{ "img/svg/back.svg" | absURL }}" alt="back"/>
+                    Назад в кошик</a>
+            </div>
+            <h4 class="o-cart-tabel__sub-title">Замовлення №1</h4>
+            <h4 class="o-cart-tabel__descriptions">Товар</h4>
+        </div>
+    </div>
+    <div class="o-cart-tabel__row">
+      <div class="o-cart-tabel__container">
+          <div class="o-cart-tabel__cont">
+              <div class="o-cart-tabel__items">
+                <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
+              </div>
+              <div class="o-cart-tabel__items">
+                  <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
+              </div>
+              <div class="o-cart-tabel__items">
+                  <p class="o-cart-tabel__count">1 шт.</p>
+              </div>
+              <div class="o-cart-tabel__items">
+                <p class="o-cart-tabel__price">699.97 грн</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="o-cart-tabel__row">
+        <div class="o-cart-tabel__container">
+            <div class="o-cart-tabel__cont">
+                <div class="o-cart-tabel__items">
+                  <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
+                </div>
+                <div class="o-cart-tabel__items">
+                    <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
+                </div>
+                <div class="o-cart-tabel__items">
+                    <p class="o-cart-tabel__count">1 шт.</p>
+                </div>
+                <div class="o-cart-tabel__items">
+                  <p class="o-cart-tabel__price">699.97 грн</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-cart-tabel__container">
+        <form class="c-form">
+            <div class="c-form__top">
+                <div class="c-form__column">
+                    <h4 class="c-form__title">Оплата</h4>
+                    <h4 class="c-form__text">Спосіб оплати:</h4>
+                    <div class="c-form__field-radio">
+                        <label class="c-form__label">
+                            <input  class="c-form__input-radio" type="radio" name="pred" value="передоплата" required>
+                            <span class="c-form__checkmark"></span>
+                            передоплата
+                        </label>
+                    </div>
+                    <div class="c-form__field-radio">
+                        <label class="c-form__label">
+                            <input class="c-form__input-radio" type="radio" name="pred" value="передоплата" required>
+                            <span class="c-form__checkmark"></span>
+                            при отриманні
+                        </label>
+                    </div>
+                </div>
+                <div class="c-form__column">
+                    <h4 class="c-form__title">Доставка</h4>
+                    <h4 class="c-form__text">Спосіб доставки:</h4>
+                    <div class="c-form__field-radio">
+                        <label class="c-form__label">
+                            <input class="c-form__input-radio" type="radio" name="drone" value="передоплата" required>
+                            <span class="c-form__checkmark"></span>
+                            Нова пошта
+                        </label>
+                    </div>
+                    <div class="c-form__field-radio">
+                        <label class="c-form__label">
+                            <input class="c-form__input-radio" type="radio" name="drone" value="передоплата" required>
+                            <span class="c-form__checkmark"></span>
+                            Кур’єром по Києву
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="c-form__bottom">
+                <div class="c-form__column">
+                    <h4 class="c-form__title">Ваші контактні дані</h4>
+                    <div class="c-form__field">
+                        <label class="c-form__label" for="name">ПІБ</label>
+                        <input class="c-form__input" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="c-form__field">
+                        <label class="c-form__label" for="name">Мобільний телефон</label>
+                        <input class="c-form__input" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="c-form__field">
+                        <label class="c-form__label" for="name">Місто</label>
+                        <input class="c-form__input" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="c-form__field">
+                        <label class="c-form__label" for="name">Номер відділення</label>
+                        <input class="c-form__input" type="text" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="c-form__total">
+                    <p class="c-form__total-tile">Разом:</p>
+                    {{ partial "component/total" (dict "class" "" "Params" .) . }}
+                </div>
+            </div>
+        </form>  
+    </div> 
+</section>
+       

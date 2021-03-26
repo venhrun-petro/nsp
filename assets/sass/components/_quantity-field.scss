@@ -1,0 +1,66 @@
+.c-quantity-field {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: max-content;
+
+  @include sm {
+    margin: 0;
+  }
+
+  &__button {
+    @include btn-clear();
+
+    background: #457759;
+    border-radius: 10px;
+    padding: 7px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 46px;
+    font-family: $font-roboto;
+    font-size: 43px;
+    line-height: 50px;
+    color: #FFFFFF;
+
+    @include sm {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      color: #D4F0B3;
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &[disabled] {
+      opacity: 0.7;
+    }
+  }
+
+  &__input {
+    width: 40px;
+    height: 46px;
+    margin: 0 3px;
+    background: #FFFFFF;
+    border: 1px solid #457759;
+    border-radius: 10px;
+    font-family: $font-roboto;
+    font-size: 27px;
+    line-height: 32px;
+    color: #191C12;
+    text-align: center;
+
+    @include sm {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border: 1px solid #457759;
+    }
+  }
+}

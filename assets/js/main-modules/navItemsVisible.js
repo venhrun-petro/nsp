@@ -2,8 +2,8 @@ import $ from 'jquery';
 
 export class NavItemsVisible {
   constructor() {
-    const dataNavArrow = '[data-nav-arrow]';
-    const dataNavLink = '[data-nav-link]';
+    this.dataNavArrow = '[data-nav-arrow]';
+    this.dataNavLink = '[data-nav-link]';
     this.eventListeners()
   }
 

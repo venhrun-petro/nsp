@@ -1,0 +1,109 @@
+<div class="o-tabs">
+  <div class="o-tabs__container">
+    <div class="o-tabs__cont" data-tabs-wrapper='0'>
+      <div class="o-tabs__items" data-tabs>Косметика по догляду</div>
+      <div class="o-tabs__items" data-tabs>БАДи</div>
+      <div class="o-tabs__items" data-tabs>Декоративна косметика</div>
+      <button class="o-tabs__btn-arrow" data-tabs-arrow>
+        <span class="o-tabs__icon"
+                style="
+                mask-image: url('{{ "img/svg/arrow-down.svg" | absURL }}');
+                -webkit-mask-image: url('{{ "img/svg/arrow-down.svg" | absURL }}');
+                mask-size: contain;
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                "
+          ></span>
+      </button>
+    </div>
+
+    <div class="o-tabs__view" data-tabs-view>
+      <div class="o-cart"> 
+        <div class="o-cart__cont">
+            <div class="c-short-cart">
+                <div class="c-short-cart__img-cont">
+                  <img class="c-short-cart__img" src="{{ .Params.img | absURL }}" alt="bonus"/>
+                </div>
+                <h2 class="c-short-cart__title">{{ .Params.title }}</h2>
+                <div class="c-short-cart__right">
+                  <div class="c-short-cart__decription">
+                    {{ .Params.decription | markdownify }}
+                  </div>
+                  <p class="c-short-cart__have {{- if not .Params.have -}} {{ " c-short-cart__have--not" }}  {{- end -}}">в наявності</p>
+                  <p class="c-short-cart__price">{{ .Params.price }}</p>
+                  <button class="c-short-cart__btn">Додати в кошик</button>
+                </div>
+            </div>
+            <div class="c-cart__content o-cart__content">
+              {{ .Params.content | markdownify }}
+              {{ partial "component/certificates" (dict "Params" .) . }} 
+            </div>
+        </div> 
+      </div>
+    </div>
+    <div class="o-tabs__view" data-tabs-view>
+      <div class="o-price-list">
+        <header class="o-price-list__header">
+            <div class="o-price-list__item o-price-list__nember">
+              <p class="o-price-list__title">№</p>
+            </div>
+            <div class="o-price-list__item">
+              <p class="o-price-list__title">Найменування</p>
+            </div>
+            <div class="o-price-list__item">
+              <p class="o-price-list__title">Код</p>
+            </div>
+            <div class="o-price-list__item">
+              <p class="o-price-list__title">В упаковці</p>
+            </div>
+            <div class="o-price-list__item">
+              <p class="o-price-list__title">Ціна, грн</p>
+            </div>
+            <div class="o-price-list__item">
+              <p class="o-price-list__title">К-ість</p>
+            </div>
+            <div class="o-price-list__item">
+              <p class="o-price-list__title">Сума, грн</p>
+            </div>
+        </header>
+        <div class="o-price-list__row" data-dropdawn-wrap>
+            <img class="o-price-list__dropdawn h-hidden-to-sm" src="{{ "img/svg/arrow-down-white.svg" | absURL }}" alt="arrow" data-dropdawn>   
+            <div class="o-price-list__item o-price-list__item--nember">
+                <p class="o-price-list__nember">1</p>
+            </div>
+            <div class="o-price-list__item o-price-list__item--name">
+              <div class="o-price-list__name">
+                  <h3 class="o-price-list__name-title">Хлорофіл рідкий (Chlorophyll liquid)</h3>
+                  <img class="o-price-list__name-img" src="{{ "img/product.png" | absURL }}" alt="price-list"/>
+                  <img class="o-price-list__name-certificates" src="{{ "img/certificates.jpg" | absURL }}" alt="certificates"/>
+              </div>
+            </div>
+            <div class="o-price-list__item o-price-list__item--code o-price-list__item--full" data-show>
+              <p class="o-price-list__title h-hidden-from-sm">Код</p>
+              <p class="o-price-list__code">RU2806</p>
+            </div>
+            <div class="o-price-list__item o-price-list__item--weight o-price-list__item--full" data-show>
+              <p class="o-price-list__title h-hidden-from-sm">В упаковці</p>
+              <p class="o-price-list__weight">60 к</p>
+            </div>
+            <div class="o-price-list__item o-price-list__item--price o-price-list__item--full" data-show>
+              <p class="o-price-list__title h-hidden-from-sm">Ціна, грн</p>
+              <p class="o-price-list__price">699.93</p>
+            </div>
+            <div class="o-price-list__item o-price-list__item--count o-price-list__item--full" data-show>
+                <p class="o-price-list__title h-hidden-from-sm">Кількість</p>
+                {{ partial "component/quantity-field" (dict "class" "o-price-list__count" "Params" .) . }}
+            </div>
+            <div class="o-price-list__item o-price-list__item--sum o-price-list__item--full" data-show>
+              <p class="o-price-list__title h-hidden-from-sm">Сума, грн</p>
+              <p class="o-price-list__sum">0</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="o-tabs__view" data-tabs-view>
+      3
+    </div>
+  </div>
+</div>

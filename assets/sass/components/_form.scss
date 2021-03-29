@@ -2,10 +2,20 @@
    display: flex;
    flex-direction: column;
 
+   @include sm {
+    max-width: 420px;
+    margin: 0 auto;
+   }
+
    &__top {
      display: flex;
      justify-content: space-between;
      margin: 60px 0 70px;
+
+     @include sm {
+      flex-direction: column;
+      margin: 20px 0 15px;
+     }
    }
 
    &__column {
@@ -14,6 +24,16 @@
      width: 100%;
      max-width: 470px;
      margin: 0 30px 0 0;
+
+     @include sm {
+      margin: 0;
+     }
+
+     &:not(:last-child) {
+      @include sm {
+        margin: 0 0 15px;
+      }
+     }
 
      &:nth-child(2) {
       max-width: 100%;
@@ -27,6 +47,14 @@
     line-height: 41px;
     color: #1275B0;
     margin: 0 0 35px;
+
+    @include sm {
+      font-weight: bold;
+      margin: 0 0 15px;
+      font-size: 20px;
+      line-height: 23px;
+      color: #457759;
+    }
    }
 
    &__text {
@@ -36,6 +64,14 @@
     line-height: 35px;
     color: #191C12;
     margin: 0 0 20px;
+
+    @include sm {
+      font-weight: bold;
+      margin: 0 0 15px;
+      font-size: 20px;
+      line-height: 23px;
+      color: #457759;
+    }
    }
 
    &__field-radio {
@@ -45,6 +81,11 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+
+    @include sm {
+      min-height: 30px;
+      align-items: center;
     }
    }
 
@@ -90,12 +131,21 @@
     color: #191C12;
     margin: 0;
     cursor: pointer;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 19px;
+    }
    }
 
    &__bottom {
      display: flex;
      justify-content: space-between;
      margin-bottom: 80px;
+
+     @include sm {
+      flex-direction: column;
+     }
    }
 
    &__total {
@@ -106,6 +156,16 @@
     border: 3px solid #669927;
     border-radius: 15px;
     padding: 45px 40px;
+
+    @include sm {
+      padding: 30px 20px;
+    }
+
+    .c-total {
+      @include sm {
+        min-width: 100%;
+      }
+    }
    }
 
    &__total-tile {
@@ -115,6 +175,13 @@
     line-height: 41px;
     color: #191C12;
     margin: 0 0 60px;
+
+    @include sm {
+      text-align: center;
+      font-size: 35px;
+      line-height: 41px;
+      margin: 0 0 30px;
+    }
    }
 
    &__field {
@@ -124,6 +191,14 @@
 
      &:not(:last-child) {
        margin: 0 0 35px;
+
+       @include sm {
+        margin: 0 0 20px;
+       }
+     }
+
+     @include sm {
+      max-width: 100%;
      }
    }
 
@@ -133,6 +208,12 @@
     border-radius: 5px;
     height: 50px;
     padding: 5px 15px;
+
+    @include sm {
+      font-size: 16px;
+      line-height: 19px;
+      border-radius: 65px;
+    }
 
     &:focus,
     &:active {

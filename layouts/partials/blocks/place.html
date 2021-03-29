@@ -3,27 +3,28 @@
         <div class="o-cart-tabel__header">
             <div class="o-cart-tabel__header-row">
                 <h1 class="o-cart-tabel__title">Оформлення замовлення</h1>
-                <a class="o-cart-tabel__back" href="">
+                <a class="o-cart-tabel__back h-hidden-to-sm" href="">
                     <img class="o-cart-tabel__back-icon" src="{{ "img/svg/back.svg" | absURL }}" alt="back"/>
                     Назад в кошик</a>
             </div>
             <h4 class="o-cart-tabel__sub-title">Замовлення №1</h4>
-            <h4 class="o-cart-tabel__descriptions">Товар</h4>
+            <h4 class="o-cart-tabel__descriptions h-hidden-to-sm">Товар</h4>
         </div>
     </div>
     <div class="o-cart-tabel__row">
       <div class="o-cart-tabel__container">
-          <div class="o-cart-tabel__cont">
+          <div class="o-cart-tabel__cont" data-dropdawn-wrap>
+              <img class="o-cart-tabel__dropdawn-icon" src="{{ "img/svg/arrow-down.svg" | absURL }}" alt="arrow" data-dropdawn>
               <div class="o-cart-tabel__items">
                 <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
               </div>
               <div class="o-cart-tabel__items">
                   <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                   <p class="o-cart-tabel__count">1 шт.</p>
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                 <p class="o-cart-tabel__price">699.97 грн</p>
               </div>
           </div>
@@ -31,17 +32,18 @@
     </div>
     <div class="o-cart-tabel__row">
         <div class="o-cart-tabel__container">
-            <div class="o-cart-tabel__cont">
+            <div class="o-cart-tabel__cont" data-dropdawn-wrap>
+                <img class="o-cart-tabel__dropdawn-icon" src="{{ "img/svg/arrow-down.svg" | absURL }}" alt="arrow" data-dropdawn>
                 <div class="o-cart-tabel__items">
                   <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
                 </div>
                 <div class="o-cart-tabel__items">
                     <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
                 </div>
-                <div class="o-cart-tabel__items">
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                     <p class="o-cart-tabel__count">1 шт.</p>
                 </div>
-                <div class="o-cart-tabel__items">
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                   <p class="o-cart-tabel__price">699.97 грн</p>
                 </div>
             </div>
@@ -51,7 +53,7 @@
         <form class="c-form">
             <div class="c-form__top">
                 <div class="c-form__column">
-                    <h4 class="c-form__title">Оплата</h4>
+                    <h4 class="c-form__title h-hidden-to-sm">Оплата</h4>
                     <h4 class="c-form__text">Спосіб оплати:</h4>
                     <div class="c-form__field-radio">
                         <label class="c-form__label">
@@ -69,7 +71,7 @@
                     </div>
                 </div>
                 <div class="c-form__column">
-                    <h4 class="c-form__title">Доставка</h4>
+                    <h4 class="c-form__title h-hidden-to-sm">Доставка</h4>
                     <h4 class="c-form__text">Спосіб доставки:</h4>
                     <div class="c-form__field-radio">
                         <label class="c-form__label">

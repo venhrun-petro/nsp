@@ -6,6 +6,7 @@
   width: 100%;
 
   @include sm {
+    min-width: 300px;
   }
 
   &__price {
@@ -20,10 +21,27 @@
     line-height: 32px;
     color: #191C12;
 
+    @include sm {
+      flex-direction: column;
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    span:not(:last-child) {
+      @include sm {
+        margin: 0 auto 15px;
+      }
+    }
+
     strong {
       font-weight: bold;
       font-size: 43px;
       line-height: 50px;
+
+      @include sm {
+        font-size: 36px;
+        line-height: 42px;
+      }
     }
   }
 
@@ -32,6 +50,11 @@
     justify-content: space-between;
     align-items: center;
     margin: 5px 0 40px;
+
+    @include sm {
+      flex-direction: column;
+      margin: 15px 0 30px;
+    }
   }
 
   &__icon-remove {
@@ -39,6 +62,10 @@
     height: 50%;
     object-fit: contain;
     margin: 0 15px 0 0;
+
+    @include sm {
+      margin: 0 auto 15px;
+    }
   }
 
   &__warning-text {
@@ -48,6 +75,13 @@
     line-height: 21px;
     color: #191C12;
     margin: 0;
+
+    @include sm {
+      text-align: center;
+      font-size: 13px;
+      line-height: 15px;
+      max-width: 265px;
+    }
   }
     
   &__btn {
@@ -63,5 +97,10 @@
     line-height: 35px;
     text-align: center;
     color: #FFFFFF;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 }

@@ -54,7 +54,6 @@
   
   
   <script type="text/javascript" src="/main.js" defer></script>
-
  
 </head>
 
@@ -269,17 +268,18 @@
  <section class="o-cart-tabel">
     <div class="o-cart-tabel__row">
       <div class="o-cart-tabel__container">
-          <div class="o-cart-tabel__cont">
+          <div class="o-cart-tabel__cont" data-dropdawn-wrap>
+              <img class="o-cart-tabel__dropdawn-icon" src="/img/svg/arrow-down.svg" alt="arrow" data-dropdawn>
               <div class="o-cart-tabel__items">
                 <img class="o-cart-tabel__img" src="/img/product.png" alt="scheme-product"/>
               </div>
               <div class="o-cart-tabel__items">
                   <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                   <p class="o-cart-tabel__price">699.97 грн</p>
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                 <div class="c-quantity-field o-cart-tabel__quantity" data-quantity-field>
   <button
     class=" c-quantity-field__button"
@@ -306,7 +306,7 @@
 </div>
 
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                   <button class="o-cart-tabel__remove">
                       <img class="o-cart-tabel__icon-remove" src="/img/svg/remove.svg" alt="cart__remove"/>
                   </button>
@@ -315,19 +315,20 @@
       </div>
     </div>
     <div class="o-cart-tabel__row">
-      <div class="o-cart-tabel__container">
-          <div class="o-cart-tabel__cont">
-              <div class="o-cart-tabel__items">
-                <img class="o-cart-tabel__img" src="/img/product.png" alt="scheme-product"/>
-              </div>
-              <div class="o-cart-tabel__items">
-                  <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
-              </div>
-              <div class="o-cart-tabel__items">
-                  <p class="o-cart-tabel__price">699.97 грн</p>
-              </div>
-              <div class="o-cart-tabel__items">
-                <div class="c-quantity-field o-cart-tabel__quantity" data-quantity-field>
+        <div class="o-cart-tabel__container">
+            <div class="o-cart-tabel__cont" data-dropdawn-wrap>
+                <img class="o-cart-tabel__dropdawn-icon" src="/img/svg/arrow-down.svg" alt="arrow" data-dropdawn>
+                <div class="o-cart-tabel__items">
+                  <img class="o-cart-tabel__img" src="/img/product.png" alt="scheme-product"/>
+                </div>
+                <div class="o-cart-tabel__items">
+                    <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
+                </div>
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
+                    <p class="o-cart-tabel__price">699.97 грн</p>
+                </div>
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
+                  <div class="c-quantity-field o-cart-tabel__quantity" data-quantity-field>
   <button
     class=" c-quantity-field__button"
     type="button"
@@ -352,21 +353,21 @@
   </button>
 </div>
 
-              </div>
-              <div class="o-cart-tabel__items">
-                  <button class="o-cart-tabel__remove">
-                      <img class="o-cart-tabel__icon-remove" src="/img/svg/remove.svg" alt="cart__remove"/>
-                  </button>
-              </div>
-          </div>
-      </div>
+                </div>
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
+                    <button class="o-cart-tabel__remove">
+                        <img class="o-cart-tabel__icon-remove" src="/img/svg/remove.svg" alt="cart__remove"/>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="o-cart-tabel__info">
         <div class="o-cart-tabel__container o-cart-tabel__info-cont">
             <a class="o-cart-tabel__link" href="#">Продовжити покупки</a>
             <div class="o-cart-tabel__total">
-                <div class="c-total " data-quantity-field>
+                <div class="c-total " >
   <p class="c-total__price">
     <span>Доставка:</span>
     <span>30.00 грн</span>

@@ -8083,6 +8083,7 @@
   var DropdawnToggle = class {
     constructor(addClass) {
       this.dropdawn = "[data-dropdawn]";
+      this.dropdawnWrap = "[data-dropdawn-wrap]";
       this.show = "[data-show]";
       this.class = addClass ? addClass : "is-active";
       this.eventListeners();
@@ -8090,7 +8091,7 @@
     eventListeners() {
       import_jquery8.default(document).on("click", `${this.dropdawn}`, (e) => {
         e.target.classList.toggle(this.class);
-        e.target.nextElementSibling.classList.toggle(this.class);
+        import_jquery8.default(e.target).closest(this.dropdawnWrap).find(this.show).slideToggle(300);
       });
     }
   };

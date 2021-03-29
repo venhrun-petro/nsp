@@ -63,9 +63,6 @@
   {{ $style := $sass | resources.ToCSS $options }} 
   <link rel="stylesheet" href="{{ $style.Permalink | absLangURL }}">
 
-  {{ $externals := slice "react" "react-dom" }}
-  {{ $defines := dict "process.env.NODE_ENV" `"development"` }}
-
  
   <script type="text/javascript" src="{{ "main.js" | absLangURL }}" defer></script>
  

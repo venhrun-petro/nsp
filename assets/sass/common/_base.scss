@@ -58,6 +58,18 @@ body {
   }
 }
 
+.h-hidden-from-sm {
+  @include min-sm {
+    display: none !important;
+  }
+}
+
+.h-hidden-to-sm {
+  @include sm {
+    display: none !important;
+  }
+}
+
 /* variable --screen is used in Javascript */
 :root {
   --screen: xs;

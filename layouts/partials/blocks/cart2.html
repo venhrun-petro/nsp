@@ -1,20 +1,21 @@
 <section class="o-cart-tabel">
     <div class="o-cart-tabel__row">
       <div class="o-cart-tabel__container">
-          <div class="o-cart-tabel__cont">
+          <div class="o-cart-tabel__cont" data-dropdawn-wrap>
+              <img class="o-cart-tabel__dropdawn-icon" src="{{ "img/svg/arrow-down.svg" | absURL }}" alt="arrow" data-dropdawn>
               <div class="o-cart-tabel__items">
                 <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
               </div>
               <div class="o-cart-tabel__items">
                   <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                   <p class="o-cart-tabel__price">699.97 грн</p>
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                 {{ partial "component/quantity-field" (dict "class" "o-cart-tabel__quantity" "Params" .) . }}
               </div>
-              <div class="o-cart-tabel__items">
+              <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
                   <button class="o-cart-tabel__remove">
                       <img class="o-cart-tabel__icon-remove" src="{{ "img/svg/remove.svg" | absURL }}" alt="cart__remove"/>
                   </button>
@@ -23,27 +24,28 @@
       </div>
     </div>
     <div class="o-cart-tabel__row">
-      <div class="o-cart-tabel__container">
-          <div class="o-cart-tabel__cont">
-              <div class="o-cart-tabel__items">
-                <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
-              </div>
-              <div class="o-cart-tabel__items">
-                  <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
-              </div>
-              <div class="o-cart-tabel__items">
-                  <p class="o-cart-tabel__price">699.97 грн</p>
-              </div>
-              <div class="o-cart-tabel__items">
-                {{ partial "component/quantity-field" (dict "class" "o-cart-tabel__quantity" "Params" .) . }}
-              </div>
-              <div class="o-cart-tabel__items">
-                  <button class="o-cart-tabel__remove">
-                      <img class="o-cart-tabel__icon-remove" src="{{ "img/svg/remove.svg" | absURL }}" alt="cart__remove"/>
-                  </button>
-              </div>
-          </div>
-      </div>
+        <div class="o-cart-tabel__container">
+            <div class="o-cart-tabel__cont" data-dropdawn-wrap>
+                <img class="o-cart-tabel__dropdawn-icon" src="{{ "img/svg/arrow-down.svg" | absURL }}" alt="arrow" data-dropdawn>
+                <div class="o-cart-tabel__items">
+                  <img class="o-cart-tabel__img" src="{{ "img/product.png" | absURL }}" alt="scheme-product"/>
+                </div>
+                <div class="o-cart-tabel__items">
+                    <h3 class="o-cart-tabel__name">Хлорофілл рідкий (Chlorophyll liquid)</h3>
+                </div>
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
+                    <p class="o-cart-tabel__price">699.97 грн</p>
+                </div>
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
+                  {{ partial "component/quantity-field" (dict "class" "o-cart-tabel__quantity" "Params" .) . }}
+                </div>
+                <div class="o-cart-tabel__items o-cart-tabel__items--full" data-show>
+                    <button class="o-cart-tabel__remove">
+                        <img class="o-cart-tabel__icon-remove" src="{{ "img/svg/remove.svg" | absURL }}" alt="cart__remove"/>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="o-cart-tabel__info">

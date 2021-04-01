@@ -62,6 +62,15 @@
     </item>
     
     <item>
+      <title>Pages</title>
+      <link>/pages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>place</title>
       <link>/place/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -94,6 +103,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>/thanks-you/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/thanks-you/</guid>
       <description></description>
     </item>
     

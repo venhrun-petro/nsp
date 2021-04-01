@@ -30,6 +30,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>/pages/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>/place/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -43,6 +47,10 @@
     <priority>0.5</priority>
   </url><url>
     <loc>/search/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>/thanks-you/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

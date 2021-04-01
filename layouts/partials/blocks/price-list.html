@@ -1,6 +1,6 @@
 <div class="o-tabs">
   <div class="o-tabs__container">
-    <div class="o-tabs__cont" data-tabs-wrapper='0'>
+    <div class="o-tabs__cont" data-tabs-wrapper='1'>
       <div class="o-tabs__items" data-tabs>Косметика по догляду</div>
       <div class="o-tabs__items" data-tabs>БАДи</div>
       <div class="o-tabs__items" data-tabs>Декоративна косметика</div>
@@ -45,38 +45,40 @@
     <div class="o-tabs__view" data-tabs-view>
       <div class="o-price-list">
         <header class="o-price-list__header">
-            <div class="o-price-list__item o-price-list__nember">
+            <div class="o-price-list__item o-price-list--number">
               <p class="o-price-list__title">№</p>
             </div>
-            <div class="o-price-list__item">
+            <div class="o-price-list__item o-price-list__item--name">
               <p class="o-price-list__title">Найменування</p>
             </div>
-            <div class="o-price-list__item">
+            <div class="o-price-list__item o-price-list__item--code">
               <p class="o-price-list__title">Код</p>
             </div>
-            <div class="o-price-list__item">
+            <div class="o-price-list__item o-price-list__item--weight">
               <p class="o-price-list__title">В упаковці</p>
             </div>
-            <div class="o-price-list__item">
+            <div class="o-price-list__item o-price-list__item--price">
               <p class="o-price-list__title">Ціна, грн</p>
             </div>
-            <div class="o-price-list__item">
+            <div class="o-price-list__item o-price-list__item--count">
               <p class="o-price-list__title">К-ість</p>
             </div>
-            <div class="o-price-list__item">
+            <div class="o-price-list__item o-price-list__item--sum">
               <p class="o-price-list__title">Сума, грн</p>
             </div>
         </header>
         <div class="o-price-list__row" data-dropdawn-wrap>
-            <img class="o-price-list__dropdawn h-hidden-to-sm" src="{{ "img/svg/arrow-down-white.svg" | absURL }}" alt="arrow" data-dropdawn>   
-            <div class="o-price-list__item o-price-list__item--nember">
-                <p class="o-price-list__nember">1</p>
+            <div class="o-price-list__item o-price-list__item--number h-hidden-to-sm">
+                <p class="o-price-list__number">1</p>
             </div>
             <div class="o-price-list__item o-price-list__item--name">
               <div class="o-price-list__name">
+                  <img class="o-price-list__dropdawn h-hidden-from-sm" src="{{ "img/svg/arrow-down.svg" | absURL }}" alt="arrow" data-dropdawn>   
                   <h3 class="o-price-list__name-title">Хлорофіл рідкий (Chlorophyll liquid)</h3>
-                  <img class="o-price-list__name-img" src="{{ "img/product.png" | absURL }}" alt="price-list"/>
-                  <img class="o-price-list__name-certificates" src="{{ "img/certificates.jpg" | absURL }}" alt="certificates"/>
+                  <div class="o-price-list__img-cont">
+                    <img class="o-price-list__name-img" src="{{ "img/product.png" | absURL }}" alt="price-list"/>
+                    <img class="o-price-list__name-certificates h-hidden-to-sm" src="{{ "img/certificates.jpg" | absURL }}" alt="certificates"/>
+                  </div>
               </div>
             </div>
             <div class="o-price-list__item o-price-list__item--code o-price-list__item--full" data-show>
@@ -99,6 +101,41 @@
               <p class="o-price-list__title h-hidden-from-sm">Сума, грн</p>
               <p class="o-price-list__sum">0</p>
             </div>
+        </div>
+        <div class="o-price-list__row" data-dropdawn-wrap>   
+          <div class="o-price-list__item o-price-list__item--number h-hidden-to-sm">
+              <p class="o-price-list__number">1</p>
+          </div>
+          <div class="o-price-list__item o-price-list__item--name">
+            <div class="o-price-list__name">
+                <img class="o-price-list__dropdawn h-hidden-from-sm" src="{{ "img/svg/arrow-down.svg" | absURL }}" alt="arrow" data-dropdawn>
+                <h3 class="o-price-list__name-title">Хлорофіл рідкий (Chlorophyll liquid)</h3>
+                <div class="o-price-list__img-cont">
+                  <img class="o-price-list__name-img" src="{{ "img/product.png" | absURL }}" alt="price-list"/>
+                  <img class="o-price-list__name-certificates h-hidden-to-sm" src="{{ "img/certificates.jpg" | absURL }}" alt="certificates"/>
+                </div>
+            </div>
+          </div>
+          <div class="o-price-list__item o-price-list__item--code o-price-list__item--full" data-show>
+            <p class="o-price-list__title h-hidden-from-sm">Код</p>
+            <p class="o-price-list__code">RU2806</p>
+          </div>
+          <div class="o-price-list__item o-price-list__item--weight o-price-list__item--full" data-show>
+            <p class="o-price-list__title h-hidden-from-sm">В упаковці</p>
+            <p class="o-price-list__weight">60 к</p>
+          </div>
+          <div class="o-price-list__item o-price-list__item--price o-price-list__item--full" data-show>
+            <p class="o-price-list__title h-hidden-from-sm">Ціна, грн</p>
+            <p class="o-price-list__price">699.93</p>
+          </div>
+          <div class="o-price-list__item o-price-list__item--count o-price-list__item--full" data-show>
+              <p class="o-price-list__title h-hidden-from-sm">Кількість</p>
+              {{ partial "component/quantity-field" (dict "class" "o-price-list__count" "Params" .) . }}
+          </div>
+          <div class="o-price-list__item o-price-list__item--sum o-price-list__item--full" data-show>
+            <p class="o-price-list__title h-hidden-from-sm">Сума, грн</p>
+            <p class="o-price-list__sum">0</p>
+          </div>
         </div>
       </div>
     </div>

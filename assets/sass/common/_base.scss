@@ -4,6 +4,10 @@ body {
   font-size: 14px;
   background-color: $color-green;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 
   & * {
     box-sizing: border-box;
